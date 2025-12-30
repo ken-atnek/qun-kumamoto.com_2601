@@ -1,9 +1,9 @@
 /* =================================
  * 	九州運輸 FOOTER
  * ------------------------------ */
-@use "../../variable" as *;
-@use "../../svg" as *;
-@use "../../mixin" as *;
+@use "../../styles/variable" as *;
+@use "../../styles/svg" as *;
+@use "../../styles/mixin" as *;
 /* stylelint-disable no-descending-specificity */
 /* stylelint-disable keyframes-name-pattern */
 /* stylelint-disable custom-property-pattern */
@@ -12,21 +12,7 @@
     @include flex-center(column);
     padding: 6em 4vw 1em;
     gap: 3em 0;
-    &::before,
-    &::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        @include top-radius($radius80);
-    }
-    &::before {
-        background-color: $main-orange;
-    }
-    &::after {
-        background: url("../../../assets/images/bg.webp") repeat center
-            center/contain;
-        mix-blend-mode: color-dodge;
-    }
+
     .pageTop {
         position: absolute;
         right: 4em;

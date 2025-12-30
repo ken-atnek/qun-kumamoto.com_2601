@@ -1,11 +1,11 @@
 /* =======================================
  *九州運輸 HEADER
- * URL: src/components/common/Header.tsx
- * Created: 2025-07-11
- * Last updated: 2025-07-11
+ * URL:src/components/common/Header.tsx
+ * Created: 2025-12-30
+ * Last updated: 2025-12-30
  * ======================================= */
 'use client';
-import styles from '@/styles/components/common/Header.module.scss';
+import styles from './Header.module.scss';
 import { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -15,24 +15,6 @@ const Header = () => {
   const navRef = useRef<HTMLDivElement>(null);
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
-
-  useEffect(() => {
-    // DOM描画後に確実にoffsetTopを取得する
-    requestAnimationFrame(() => {
-      headerOffsetRef.current = headerRef.current?.offsetTop ?? 0;
-
-      const handleScroll = () => {
-        const y = window.scrollY;
-        setIsFixed(y >= headerOffsetRef.current + 400);
-      };
-
-      window.addEventListener('scroll', handleScroll);
-      handleScroll();
-
-      // クリーンアップ
-      return () => window.removeEventListener('scroll', handleScroll);
-    });
-  }, []);
 
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
@@ -49,25 +31,6 @@ const Header = () => {
       document.removeEventListener('click', handleOutsideClick, true);
   }, [isOpen]);
 
-  // Fixed header state and ref
-  const [isFixed, setIsFixed] = useState(false);
-  const headerRef = useRef<HTMLElement>(null);
-  // Store the original Y-offset of the header
-  const headerOffsetRef = useRef(0);
-
-  useEffect(() => {
-    // Set the original offsetTop of the header on mount
-    headerOffsetRef.current = headerRef.current?.offsetTop ?? 0;
-    const handleScroll = () => {
-      const y = window.scrollY;
-      setIsFixed(y >= headerOffsetRef.current);
-    };
-    window.addEventListener('scroll', handleScroll);
-    // Run once to set state if already scrolled
-    handleScroll();
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   // ページ判定
   const pathname = usePathname();
   const isTop = pathname === '/';
@@ -76,10 +39,8 @@ const Header = () => {
     <header
       className={clsx(
         styles.containerHeader,
-        isFixed && styles['is-fixed'],
         isTop ? styles['isTop'] : styles['isSub']
       )}
-      ref={headerRef}
       id="Header"
     >
       <button

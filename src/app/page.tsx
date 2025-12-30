@@ -1,8 +1,8 @@
 /* =======================================
  * 九州運輸 TOPページ
  * URL: src/app/page.tsx
- * Created: 2025-08-26
- * Last updated: 2025-08-26
+ * Created: 2025-12-30
+ * Last updated: 2025-12-30
  * ======================================= */
 
 import type { Metadata } from 'next';
