@@ -2,7 +2,7 @@
  *九州運輸 HEADER
  * URL:src/components/common/Header.tsx
  * Created: 2025-12-30
- * Last updated: 2025-12-30
+ * Last updated: 2026-1-4
  * ======================================= */
 'use client';
 import styles from './Header.module.scss';
@@ -10,6 +10,7 @@ import { useEffect, useState, useRef } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
+import Image from 'next/image';
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef<HTMLDivElement>(null);
@@ -57,21 +58,31 @@ const Header = () => {
         <span></span>
       </button>
       <article>
-        <Link href="/" className={styles.itemLogo}>
-          <h1>
-            <svg aria-label="九州運輸">
-              <use href="#svg_logoMark" />
-            </svg>
-            <span>熊本医療＆介護の転職サイト</span>
-          </h1>
-        </Link>
-        <nav>
-          <Link href="/jobs/">求人検索</Link>
-          <Link href="/library/">お気に入り・閲覧検索</Link>
+        <h1>
+          <Link href="/" aria-label="株式会社九州運輸 トップページへ">
+            <Image
+              src={isTop ? '/images/logo-wh.webp' : '/images/logo-bk.webp'}
+              alt="株式会社九州運輸"
+              width={360}
+              height={40}
+              loading="lazy"
+            />
+          </Link>
+        </h1>
+
+        <nav className={styles.mainMenu}>
+          <Link href="/">事業内容</Link>
+          <Link href="/">保有車両</Link>
+          <Link href="/">会社概要</Link>
         </nav>
-        <Link href="" className={styles.linkMyPage}>
-          <span> マイページ</span>
-        </Link>
+        <nav className={styles.subMenu}>
+          <Link href="/" className={styles.linkRecruit}>
+            採用情報
+          </Link>
+          <Link href="/" className={styles.linkContact}>
+            ご依頼・お問い合せ
+          </Link>
+        </nav>
       </article>
     </header>
   );

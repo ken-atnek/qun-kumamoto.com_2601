@@ -2,7 +2,7 @@
  *九州運輸 FOOTER
  * URL: src/components/common/Footer.tsx
  * Created: 2025-12-30
- * Last updated: 2025-12-30
+ * Last updated: 2026-1-4
  * ======================================= */
 import Image from 'next/image';
 import styles from './Footer.module.scss';

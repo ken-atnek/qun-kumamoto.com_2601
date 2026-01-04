@@ -36,7 +36,7 @@ body {
     min-height: 100vh;
     justify-content: space-between;
     width: 100%;
-    color: $main-black;
+    color: $font-black;
     background-color: $base-white;
     @include tbw {
         overflow-x: clip;
