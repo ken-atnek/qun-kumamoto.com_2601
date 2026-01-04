@@ -79,7 +79,7 @@
     }
     &.is-fixed {
         position: fixed;
-        background-color: $main-orange;
+        // background-color: $main-orange;
     }
     &.isTop {
         @include bottom-radius($radius40);

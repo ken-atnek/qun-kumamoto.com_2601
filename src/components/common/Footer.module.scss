@@ -10,4 +10,237 @@
 // このファイル全体のルールを無効にする
 .containerFooter {
     @include flex-center(column);
+    .containerContact {
+        @include flex-center(column);
+        padding-block: 3.5em;
+        padding-inline: 2vw;
+        h2,
+        p {
+            font-size: FZ(14);
+            letter-spacing: 0.1em;
+        }
+        .boxLogo {
+            max-width: 78rem;
+            margin-top: 4rem;
+            margin-bottom: 2rem;
+            img {
+                width: 100%;
+            }
+        }
+        .itemTel {
+            @include futura-pt-book;
+            font-size: FZ(64);
+            letter-spacing: 0.05em;
+            span {
+                @include futura-pt-demi;
+                font-size: 0.5em;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+            }
+        }
+        nav {
+            position: relative;
+            font-size: inherit;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin-top: 2rem;
+            max-width: 86rem;
+            width: 100%;
+            gap: 0 1em;
+            a {
+                font-size: inherit;
+                background-color: $main-green;
+                color: $font-white;
+                @include flex-center(column);
+                padding: 5.6em 1em 1em;
+                position: relative;
+                h3 {
+                    position: relative;
+                    font-size: FZ(32);
+                    @include futura-pt-book;
+                    letter-spacing: 0.1em;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        left: 50%;
+                        translate: -50%;
+                    }
+                }
+                span {
+                    font-size: FZ(14);
+                    font-weight: 500;
+                    letter-spacing: 0.14em;
+                    margin-top: 0.8em;
+                }
+            }
+            .itemAccess {
+                h3 {
+                    &::before {
+                        width: 3.2rem;
+                        @include svg-icon-map("CCFF00");
+                        bottom: calc(100% + 8px);
+                    }
+                }
+            }
+            .itemContact {
+                h3 {
+                    &::before {
+                        width: 4rem;
+                        @include svg-icon-pc("CCFF00");
+                        bottom: calc(100% + 8px);
+                    }
+                }
+            }
+        }
+    }
+    // メニュー
+    .containerMenu {
+        background-color: $dark-green;
+        color: $font-white;
+        @include flex-center(column);
+        padding: 7rem 2vw 4rem;
+        article {
+            max-width: 96rem;
+            display: grid;
+            grid-template-columns: auto 1fr;
+            .boxLogo {
+                grid-column: span 2;
+            }
+            nav {
+                grid-column: span 2;
+                position: relative;
+                margin-top: 8rem;
+                font-size: inherit;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                border-bottom: 1px solid $light-green;
+                a {
+                    font-size: FZ(16);
+                    padding-bottom: 2rem;
+                    @include flex-center;
+                    flex: 1;
+                    letter-spacing: 0.1em;
+                }
+            }
+            .boxAddress {
+                display: flex;
+                flex-direction: column;
+                font-size: inherit;
+                padding-top: 2rem;
+                span {
+                    font-size: FZ(16);
+                    font-weight: 500;
+                    letter-spacing: 0.1em;
+                    line-height: 1.6em;
+                    a {
+                        color: $light-green;
+                        @include futura-pt-book;
+                        font-size: 1.25em;
+                        padding-left: 0.8em;
+                        position: relative;
+                        margin-left: 0.4em;
+                        letter-spacing: 0.1em;
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            translate: 0 -50%;
+                            left: 0;
+                            width: 1.2rem;
+                            @include svg-icon-map("CCFF00");
+                        }
+                    }
+                }
+                .wrapTel {
+                    font-size: inherit;
+                    display: flex;
+                    align-items: center;
+                    a {
+                        font-size: FZ(24);
+                        @include futura-pt-book;
+                        letter-spacing: 0.1em;
+                        span {
+                            text-transform: uppercase;
+                        }
+                        &:first-of-type {
+                            &::after {
+                                content: "|";
+                                margin-inline: 0.4em;
+                            }
+                        }
+                    }
+                }
+            }
+            .boxContact {
+                justify-self: end;
+                font-size: inherit;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 1em 0;
+                padding-top: 6rem;
+                a {
+                    font-size: FZ(16);
+                    font-weight: 500;
+                    background-color: $main-green;
+                    @include flex-center;
+                    padding: 1.2em 2.4em;
+                }
+                p {
+                    font-size: FZ(12);
+                    font-weight: 500;
+                    letter-spacing: 0.1em;
+                }
+            }
+        }
+    }
+    // 亀の甲温泉・岡稲荷大明神
+    .containerGroupShop {
+        @include flex-center(column);
+        padding: 4rem 2vw;
+        ul {
+            position: relative;
+            font-size: inherit;
+            width: 100%;
+            max-width: 103rem;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0 3rem;
+            li {
+                position: relative;
+                grid-row: span 2;
+                display: grid;
+                font-size: inherit;
+                grid-template-rows: subgrid;
+                a {
+                    display: grid;
+                    grid-template-columns: auto 1fr;
+                    font-size: inherit;
+                    .itemImage {
+                        img {
+                            // aspect-ratio: 158/114;
+                            object-fit: cover;
+                            height: 100%;
+                        }
+                    }
+                    .itemLogo {
+                        background-color: #ececec;
+                        @include flex-center;
+                        padding: 1.6em;
+                        font-size: inherit;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+                p {
+                    font-size: FZ(16);
+                    text-align: center;
+                    margin-top: 1em;
+                    letter-spacing: 0.1em;
+                }
+            }
+        }
+    }
 }
