@@ -3,6 +3,26 @@
 
 // @import "swiper/css";
 // @import "swiper/css/navigation";
+
+/* =================================
+ * フォント読み込み
+ * ------------------------------ */
+
+@font-face {
+    font-family: "FuturaPT-Book";
+    src: url("/fonts/FuturaCyrillicBook.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: "FuturaPT-Demi";
+    src: url("/fonts/FuturaCyrillicDemi.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 body {
     @include SunSerif;
 

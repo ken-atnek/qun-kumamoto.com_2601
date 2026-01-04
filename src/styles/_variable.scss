@@ -51,7 +51,16 @@ $articleMaxWidth: 1158px;
     font-weight: 400;
     font-style: normal;
 }
-
+@mixin futura-pt-book {
+    font-family: "FuturaPT-Book";
+    font-weight: 400;
+    font-style: normal;
+}
+@mixin futura-pt-demi {
+    font-family: "FuturaPT-Demi";
+    font-weight: 400;
+    font-style: normal;
+}
 /* =================================
  * カラー変数
  * ------------------------------ */
