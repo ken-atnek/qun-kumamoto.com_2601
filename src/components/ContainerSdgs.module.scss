@@ -1,0 +1,33 @@
+/* =================================
+ * 	九州運輸 SDGS
+ * ------------------------------ */
+@use "../styles/variable" as *;
+@use "../styles/svg" as *;
+@use "../styles/mixin" as *;
+/* stylelint-disable no-descending-specificity */
+/* stylelint-disable keyframes-name-pattern */
+/* stylelint-disable custom-property-pattern */
+// このファイル全体のルールを無効にする
+
+.containerSdgs {
+    @include flex-center(column);
+    padding: 9rem 2vw 6.8rem;
+    .itemLogo {
+        max-width: 493px;
+    }
+    h2 {
+        margin-top: 3.1rem;
+        font-size: FZ(16);
+        font-weight: 500;
+    }
+    ul {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        max-width: $articleMaxWidth;
+        gap: 0 1.5rem;
+        margin-top: 6.3rem;
+        li {
+            width: 100%;
+        }
+    }
+}
