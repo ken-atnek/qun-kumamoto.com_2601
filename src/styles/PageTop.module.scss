@@ -10,8 +10,8 @@
 // このファイル全体のルールを無効にする
 
 .itemH2 {
-    color: #6fb72f;
     font-size: FZ(16);
+    letter-spacing: 0.1em;
 }
 .sidebarH2 {
     @include futura-pt-book;
@@ -41,10 +41,7 @@
         left: 0;
         width: 100%;
         img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: left bottom;
+            position: relative;
         }
     }
     .catch {
@@ -62,11 +59,14 @@
     }
 }
 /* =================================
- * WORKS
+ * 業務内容(WORKS)
  * ------------------------------ */
 .containerTopWorks {
     @include flex-center(column);
-    padding: 9.3rem 2vw 7rem;
+    padding: 9.3rem 2vw 12rem;
+    .itemH2 {
+        color: $sub-green;
+    }
     .announce {
         font-size: FZ(16);
         letter-spacing: 0.1em;
@@ -147,24 +147,16 @@
                 width: 7rem;
                 aspect-ratio: 1;
                 border-radius: 50%;
-                background-color: #6fb72f;
-                &::after,
-                &::before {
+                background-color: $sub-green;
+                &::after {
                     content: "";
                     position: absolute;
                     inset: 0;
                     margin: auto;
-                    width: 15px;
-                    aspect-ratio: 0.85;
-                    clip-path: polygon(0 0, 0 100%, 100% 50%);
-                }
-                &::before {
-                    background-color: rgba(#000, 0.25);
-                    filter: blur(6px);
-                    translate: 2px 2px;
-                }
-                &::after {
-                    background-color: $font-white;
+                    translate: 2px;
+                    width: 13px;
+                    @include svg-arrow-triangle("F8F8F8");
+                    @include drop-shadow;
                 }
             }
             &[data-work="service"] {
@@ -187,6 +179,121 @@
                         background-image: url("/images/top/works03.webp");
                     }
                 }
+            }
+        }
+    }
+}
+/* =================================
+ * 会社概要(COMPANY)
+ * ------------------------------ */
+.containerTopCompany {
+    padding: 0 2vw 5.3rem;
+    @include flex-center;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        z-index: -1;
+    }
+    &::before {
+        background: url(/images/top/company.webp) no-repeat center center /
+            cover;
+    }
+    &::after {
+        background-color: rgba($dark-green, 0.9);
+    }
+    article {
+        max-width: $articleMaxWidth;
+        display: flex;
+        justify-content: flex-end;
+        .boxContents {
+            position: relative;
+            width: 50%;
+            font-size: inherit;
+            display: flex;
+            flex-direction: column;
+            padding-top: 7.3rem;
+            padding-left: 7.6rem;
+            &::before {
+                content: "";
+                position: absolute;
+                right: 100%;
+                height: calc(100% + 5rem);
+                width: 50vw;
+                bottom: 0;
+                background: url(/images/top/company.webp) no-repeat center
+                    center / cover;
+            }
+            .itemH2 {
+                color: $light-green;
+            }
+            .sidebarH2 {
+                color: $font-white;
+            }
+            .announce {
+                font-size: FZ(16);
+                letter-spacing: 0.1em;
+                margin-top: 4rem;
+                color: $font-white;
+                line-height: 2em;
+            }
+            a {
+                max-width: 40rem;
+                margin-top: 8.5rem;
+                @include page-link;
+            }
+        }
+    }
+}
+/* =================================
+ * 採用情報(RECRUIT)
+ * ------------------------------ */
+.containerTopRecruit {
+    padding: 7.5rem 2vw 6.1rem;
+    @include flex-center;
+    background-color: $main-green;
+    article {
+        max-width: $articleMaxWidth;
+        display: flex;
+        .boxContents {
+            position: relative;
+            font-size: inherit;
+            display: flex;
+            flex-direction: column;
+            color: $font-white;
+            padding-left: 10.5rem;
+            padding-right: 6.1rem;
+            &::after {
+                content: "";
+                position: absolute;
+                left: 100%;
+                height: calc(100% + 5rem);
+                width: 60vw;
+                bottom: 0;
+                background: url(/images/top/recruit.webp) no-repeat left
+                    bottom / contain;
+            }
+            .itemH2 {
+                color: $light-green;
+            }
+            h3 {
+                font-size: FZ(20);
+                letter-spacing: 0.1em;
+                font-weight: 500;
+                margin-top: 1.7rem;
+            }
+            .announce {
+                font-size: FZ(16);
+                letter-spacing: 0.1em;
+                margin-top: 5rem;
+                line-height: 2em;
+            }
+            a {
+                max-width: 40rem;
+                margin-top: 1.7rem;
+                @include page-link;
             }
         }
     }

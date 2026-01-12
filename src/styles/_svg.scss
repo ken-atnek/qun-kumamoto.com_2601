@@ -14,3 +14,11 @@
     background-size: contain;
     background-position: center center;
 }
+// ▲アイコン
+@mixin svg-arrow-triangle($color) {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 15" fill="%23#{$color}"><path d="M-6.54462e-07 0.0398964L12.976 7.51995L0 15L-6.54462e-07 0.0398964Z" /></svg>');
+    aspect-ratio: 13/15;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}

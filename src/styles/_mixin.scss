@@ -6,8 +6,14 @@
     align-items: center;
     justify-content: center;
 }
+@mixin transition($props: all, $time: 0.3s, $ease: ease-out) {
+    transition: $props $time $ease;
+}
 @mixin box-shadow {
     box-shadow: 3px 3px 2px 0 rgb(178 126 52 / 20%);
+}
+@mixin drop-shadow {
+    filter: drop-shadow(0 4px 4px rgba(#000, 0.25));
 }
 @mixin detail-h2 {
     position: relative;
@@ -24,5 +30,52 @@
 
         // width: 2.8rem;
         // @include svg-icon-clock(f29400);
+    }
+}
+
+@mixin page-link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $sub-green;
+    font-size: inherit;
+    height: 7.8rem;
+    padding-left: 5rem;
+    transition: 0.3s ease-out;
+    padding-right: 1.8rem;
+    span {
+        color: $font-white;
+        @include transition(color);
+    }
+    i {
+        position: relative;
+        width: 5rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background-color: rgba($font-white, 0.4);
+        @include transition(background-color);
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            margin: auto;
+            translate: 2px;
+            width: 13px;
+            @include svg-arrow-triangle("F8F8F8");
+            @include drop-shadow;
+            @include transition(background-image);
+        }
+    }
+    @include hover {
+        background-color: $font-white;
+        span {
+            color: $main-green;
+        }
+        i {
+            background-color: rgba($main-green, 0.4);
+            &::before {
+                @include svg-arrow-triangle("176d60");
+            }
+        }
     }
 }
