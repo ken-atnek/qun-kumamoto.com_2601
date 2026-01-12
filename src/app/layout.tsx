@@ -7,7 +7,7 @@
 
 import type { Metadata } from 'next';
 import '@/styles/globals.scss';
-import { Noto_Sans_JP, Roboto } from 'next/font/google';
+import { Noto_Sans_JP, Roboto, Oswald } from 'next/font/google';
 import SvgDefs from '@/components/SvgDefs';
 import Header from '@/components/common/Header';
 import Footer from '@/components/common/Footer';
@@ -21,6 +21,11 @@ const notoSans = Noto_Sans_JP({
 const roboto = Roboto({
   subsets: ['latin'],
   weight: ['100', '300', '400', '500', '700', '900'],
+  display: 'swap',
+});
+const oswald = Oswald({
+  subsets: ['latin'],
+  weight: ['300'],
   display: 'swap',
 });
 
@@ -72,7 +77,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className={`${notoSans.className} ${roboto.className}`}>
+    <html
+      className={`${notoSans.className} ${roboto.className}  ${oswald.className}`}
+    >
       <head>
         <meta
           name="format-detection"

@@ -71,7 +71,7 @@ const Header = () => {
         </h1>
 
         <nav className={styles.mainMenu}>
-          <Link href="/">事業内容</Link>
+          <Link href="/works/">事業内容</Link>
           <Link href="/">保有車両</Link>
           <Link href="/">会社概要</Link>
         </nav>

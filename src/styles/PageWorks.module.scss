@@ -1,0 +1,253 @@
+/* =================================
+ * 	九州運輸 事業内容(WORKS)
+ * ------------------------------ */
+@use "variable" as *;
+@use "svg" as *;
+@use "mixin" as *;
+/* stylelint-disable no-descending-specificity */
+/* stylelint-disable keyframes-name-pattern */
+/* stylelint-disable custom-property-pattern */
+// このファイル全体のルールを無効にする
+
+/* =================================
+ * サービス
+ * ------------------------------ */
+.containerWorksService {
+    @include flex-center(column);
+    padding: 10rem 2vw 6.3rem;
+    &::before,
+    &::after {
+        content: "";
+        z-index: -1;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 77rem;
+    }
+    &::before {
+        background: url(/images/works/bg-service.webp) no-repeat center
+            center/cover;
+    }
+    &::after {
+        background-color: rgba($dark-green, 0.8);
+    }
+    & > article {
+        @include flex-center(column);
+        padding-top: 16rem;
+        max-width: $articleMaxWidth;
+        h4 {
+            position: relative;
+            font-size: FZ(32);
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: $font-white;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                translate: -50%;
+                bottom: calc(100% + 0.75em);
+                width: 40%;
+                background: url(/images/top/recruit.webp) no-repeat center
+                    center / contain;
+                aspect-ratio: 1280/843;
+            }
+        }
+        .sidebarH4 {
+            @include futura-pt-book;
+            color: $light-green;
+            font-size: FZ(14);
+            letter-spacing: 0.1em;
+        }
+        .listText {
+            position: relative;
+            display: grid;
+            grid-template-columns: auto auto;
+            font-size: inherit;
+            color: $font-white;
+            margin-top: 6.6rem;
+            gap: 3.6rem 5rem;
+            li {
+                position: relative;
+                font-size: FZ(20);
+                letter-spacing: 0.1em;
+                padding-left: 3em;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    translate: 0 -50%;
+                }
+                &:nth-of-type(1) {
+                    &::before {
+                        width: 3.2rem;
+                        @include svg-works-service01("ccff00");
+                    }
+                }
+                &:nth-of-type(2) {
+                    &::before {
+                        width: 2.6rem;
+                        @include svg-works-service02("ccff00");
+                    }
+                }
+                &:nth-of-type(3) {
+                    &::before {
+                        width: 3.2rem;
+                        @include svg-works-service03("ccff00");
+                    }
+                }
+                &:nth-of-type(4) {
+                    &::before {
+                        width: 3rem;
+                        @include svg-works-service04("ccff00");
+                    }
+                }
+                &:nth-of-type(5) {
+                    &::before {
+                        width: 3.2rem;
+                        @include svg-works-service05("ccff00");
+                    }
+                }
+                &:nth-of-type(6) {
+                    &::before {
+                        width: 3.2rem;
+                        @include svg-works-service06("ccff00");
+                    }
+                }
+            }
+        }
+        .listService {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            font-size: inherit;
+            margin-top: 9rem;
+            li {
+                position: relative;
+                font-size: inherit;
+                background-color: #f1f3f2;
+                padding: 1rem 3.6rem 2.5rem;
+                grid-row: span 4;
+                display: grid;
+                grid-template-rows: subgrid;
+                border-top: 1px solid $sub-green;
+                border-right: 1px solid $sub-green;
+                border-bottom: 1px solid $sub-green;
+                &:first-of-type {
+                    border-left: 1px solid $sub-green;
+                }
+                .itemNumber {
+                    position: relative;
+                    @include Oswald;
+                    font-size: FZ(72);
+                    font-weight: 300;
+                    color: $sub-green;
+                    width: fit-content;
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        width: 100%;
+                        height: 5px;
+                        background-color: $sub-green;
+                        top: -1.3rem;
+                    }
+                }
+                img {
+                    justify-self: center;
+                    width: 10.9rem;
+                    object-fit: cover;
+                    aspect-ratio: 1;
+                    margin-top: 2.1rem;
+                }
+                h5 {
+                    margin-top: 3.1rem;
+                    color: $dark-green;
+                    font-size: FZ(24);
+                    letter-spacing: 0.1em;
+                }
+                p {
+                    font-size: FZ(16);
+                    letter-spacing: 0.1em;
+                    text-align: justify;
+                    margin-top: 1.2rem;
+                    line-height: 1.6em;
+                    span {
+                        font-size: inherit;
+                    }
+                }
+            }
+        }
+    }
+}
+/* =================================
+ * 各種ご依頼
+ * ------------------------------ */
+.containerWorksRequest {
+    @include flex-center(column);
+    padding: 10rem 2vw 9rem;
+    background-color: $dark-green;
+    & > article {
+        max-width: $articleMaxWidth;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10rem;
+        .listRequest {
+            position: relative;
+        }
+        .linkContact {
+            width: 100%;
+            max-width: 60rem;
+            margin-top: 3.6rem;
+            @include page-link;
+        }
+        .listRequest {
+            position: relative;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            font-size: inherit;
+            gap: 0 1.5rem;
+            li {
+                position: relative;
+                font-size: inherit;
+                background-color: #f1f3f2;
+                grid-row: span 2;
+                display: grid;
+                grid-template-rows: subgrid;
+                img {
+                    width: 100%;
+                    aspect-ratio: 1.7;
+                    object-fit: cover;
+                }
+                .contents {
+                    background-color: $main-green;
+                    color: $font-white;
+                    padding: 2.5rem 2rem 4rem;
+                    display: flex;
+                    flex-direction: column;
+                    font-size: inherit;
+                    gap: 0.9rem 0;
+                    h4 {
+                        font-size: FZ(20);
+                        font-weight: 700;
+                        letter-spacing: 0.1em;
+                    }
+                    p {
+                        font-size: FZ(14);
+                        letter-spacing: 0.1em;
+                        text-align: justify;
+                        line-height: 1.6em;
+                        font-weight: 400;
+                        span {
+                            font-size: inherit;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

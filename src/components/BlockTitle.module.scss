@@ -1,0 +1,42 @@
+/* =================================
+ * 	九州運輸 ページタイトル
+ * ------------------------------ */
+@use "../styles/variable" as *;
+@use "../styles/svg" as *;
+@use "../styles/mixin" as *;
+
+.BlockTitle {
+    @include flex-center;
+    width: 100%;
+    font-size: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding-inline: 2vw;
+    height: 10rem;
+    background: linear-gradient(
+        90deg,
+        rgba($main-green, 1) 50%,
+        rgba($main-green, 0) 100%
+    );
+    & > article {
+        max-width: $articleMaxWidth;
+        display: flex;
+        align-items: center;
+        gap: 0 3.2rem;
+        h3 {
+            position: relative;
+            font-size: FZ(48);
+            font-weight: 500;
+            color: $font-white;
+            letter-spacing: 0.1em;
+        }
+
+        .sidebarH4 {
+            color: $light-green;
+            font-size: FZ(16);
+            letter-spacing: 0.4em;
+            text-transform: capitalize;
+        }
+    }
+}

@@ -1,17 +1,16 @@
 /* =======================================
- * 九州運輸 TOPページ
- * URL: src/app/page.tsx
- * Created: 2025-12-30
- * Last updated: 2026-1-10
+ * 九州運輸 事業内容(WORKS)
+ * URL: src/app/works/page.tsx
+ * Created: 2026-1-12
+ * Last updated: 2026-1-12
  * ======================================= */
 
 import type { Metadata } from 'next';
 import { isRealProduction } from '@/lib/env';
-import ContainerTopHero from '@/components/top/ContainerTopHero';
-import ContainerTopWorks from '@/components/top/ContainerTopWorks';
-import ContainerTopCompany from '@/components/top/ContainerTopCompany';
-import ContainerSdgs from '@/components/ContainerSdgs';
-import ContainerTopRecruit from '@/components/top/ContainerTopRecruit';
+
+import PageTitle from '@/components/PageTitle';
+import ContainerWorksService from '@/components/works/ContainerWorksService';
+import ContainerWorksRequest from '@/components/works/ContainerWorksRequest';
 
 export const generateMetadata = (): Metadata => {
   return {
@@ -21,14 +20,17 @@ export const generateMetadata = (): Metadata => {
       : undefined,
   };
 };
-export default function PageTop() {
+export default function PageWorks() {
   return (
     <>
-      <ContainerTopHero />
-      <ContainerTopWorks />
-      <ContainerTopCompany />
-      <ContainerSdgs />
-      <ContainerTopRecruit />
+      <PageTitle
+        titleEn="WORKS"
+        titleJp="業務内容"
+        description="地域密着と地域貢献をコンセプトに高品質輸送を展開"
+        variant="works"
+      />
+      <ContainerWorksService />
+      <ContainerWorksRequest />
     </>
   );
 }

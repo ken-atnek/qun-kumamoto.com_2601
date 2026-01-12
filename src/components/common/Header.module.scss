@@ -61,13 +61,23 @@
         }
     }
     // トップページ
-    &.isTop {
-        @include bottom-radius($radius40);
-    }
+    // &.isTop {
+    // }
     // 下層ページ
     &.isSub {
-        background-color: $main-orange;
-        position: fixed;
+        background-color: #fff;
+        padding-bottom: 13px;
+        box-shadow: 0 0 4px rgba(#000, 0.25);
+        nav {
+            a {
+                color: #111;
+            }
+        }
+        .subMenu {
+            a {
+                color: #fff;
+            }
+        }
     }
 }
 .hamburgerButton {

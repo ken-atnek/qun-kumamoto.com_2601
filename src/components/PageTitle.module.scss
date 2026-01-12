@@ -1,0 +1,71 @@
+/* =================================
+ * 	九州運輸 ページタイトル
+ * ------------------------------ */
+@use "../styles/variable" as *;
+@use "../styles/svg" as *;
+@use "../styles/mixin" as *;
+
+.containerPageTop {
+    @include flex-center;
+    padding: 7em 2vw 0;
+    article {
+        max-width: $articleMaxWidth;
+        @include flex-center(column);
+        .itemBreadcrumb {
+            align-self: flex-start;
+            display: flex;
+            font-size: inherit;
+            align-items: center;
+            a {
+                font-size: FZ(16);
+                letter-spacing: 0.1em;
+                &::after {
+                    content: "｜";
+                }
+            }
+            p {
+                font-size: FZ(16);
+                letter-spacing: 0.1em;
+                span {
+                    &::before {
+                        content: "（";
+                    }
+                    &::after {
+                        content: "）";
+                    }
+                }
+            }
+        }
+        h2 {
+            padding-top: 25px;
+            color: $sub-green;
+            font-size: FZ(16);
+            letter-spacing: 0.1em;
+        }
+        .sidebarH2 {
+            margin-top: 5.8rem;
+            @include futura-pt-book;
+            font-size: FZ(64);
+        }
+        .description {
+            margin-top: 2rem;
+            font-size: FZ(16);
+            letter-spacing: 0.1em;
+        }
+        .bgText {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            translate: -50%;
+            font-size: FZ(280);
+            line-height: 0.7em;
+            color: #f1f3f2;
+            z-index: -1;
+        }
+    }
+    &.variant-works {
+        article {
+            padding: 25px 0 6.4rem;
+        }
+    }
+}
