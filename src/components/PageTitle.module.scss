@@ -63,7 +63,8 @@
             z-index: -1;
         }
     }
-    &.variant-works {
+    &.variant-works,
+    &.variant-company {
         article {
             padding: 25px 0 6.4rem;
         }

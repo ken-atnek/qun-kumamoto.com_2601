@@ -34,7 +34,7 @@ export default function PageTitle({
           <div className={styles.itemBreadcrumb}>
             <Link href="/">TOP</Link>
             <p>
-              {titleEn && <span>{titleEn}</span>}
+              {titleEn && <i>{titleEn}</i>}
               {titleJp && <span>{titleJp}</span>}
             </p>
           </div>

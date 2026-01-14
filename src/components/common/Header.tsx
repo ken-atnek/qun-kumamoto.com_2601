@@ -73,7 +73,7 @@ const Header = () => {
         <nav className={styles.mainMenu}>
           <Link href="/works/">事業内容</Link>
           <Link href="/">保有車両</Link>
-          <Link href="/">会社概要</Link>
+          <Link href="/company/">会社概要</Link>
         </nav>
         <nav className={styles.subMenu}>
           <Link href="/" className={styles.linkRecruit}>

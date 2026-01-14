@@ -58,8 +58,8 @@ const Footer = () => {
           </div>
           <nav>
             <Link href="/">保有車両</Link>
-            <Link href="/">サービズ</Link>
-            <Link href="/">会社概要</Link>
+            <Link href="/">サービス</Link>
+            <Link href="/company/">会社概要</Link>
             <Link href="/">採用情報</Link>
             <Link href="/">各種ご依頼</Link>
           </nav>

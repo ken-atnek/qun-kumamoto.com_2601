@@ -14,9 +14,9 @@ import ContainerWorksRequest from '@/components/works/ContainerWorksRequest';
 
 export const generateMetadata = (): Metadata => {
   return {
-    title: '株式会社九州運輸',
+    title: '事業内容｜熊本発・全国対応の物流サービス｜株式会社九州運輸',
     description: isRealProduction
-      ? '株式会社九州運輸は、地域に根ざした物流サービスを通じて、安全・確実・迅速な輸送を提供しています。お客様の大切な荷物を責任を持ってお届けし、地域社会とともに成長し続ける運輸会社です。'
+      ? '熊本を拠点に、県内から全国へ物流・輸送サービスを展開する株式会社九州運輸。個別配送便、チャーター便、スポット便、倉庫保管、積替え輸送など、多様なニーズに柔軟に対応しています。'
       : undefined,
   };
 };

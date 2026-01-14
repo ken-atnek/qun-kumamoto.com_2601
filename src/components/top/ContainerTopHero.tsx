@@ -33,7 +33,6 @@ export default function ContainerTopHero() {
       <div className={styles.bgImage}>
         {heroImages.map((src, index) => {
           const isActive = index === currentIndex;
-
           return (
             <Image
               key={src}
