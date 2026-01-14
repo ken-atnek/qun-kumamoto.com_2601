@@ -1,4 +1,4 @@
-import styles from '@/styles/components/Modal.module.scss';
+import styles from './Modal.module.scss';
 
 interface ModalProps {
   message: string;

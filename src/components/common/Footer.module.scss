@@ -186,6 +186,7 @@
                     background-color: $main-green;
                     @include flex-center;
                     padding: 1.2em 2.4em;
+                    letter-spacing: 0.1em;
                 }
                 p {
                     font-size: FZ(12);

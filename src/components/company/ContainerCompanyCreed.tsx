@@ -5,6 +5,7 @@
  * Last updated: 2026-1-13
  * ======================================= */
 
+import ExternalLink from '@/components/common/ExternalLink';
 import styles from '@/styles/PageCompany.module.scss';
 
 export default function ContainerCompanyCreed() {
@@ -34,6 +35,27 @@ export default function ContainerCompanyCreed() {
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
           />
+        </div>
+        <div className={styles.boxBottom}>
+          <div className={styles.wrapTitle}>
+            <span className={styles.sidebarH3}>Access</span>
+            <h3>アクセス</h3>
+          </div>
+          <div className={styles.wrapAddress}>
+            <span className={styles.name}>
+              <i>会社名</i>株式会社九州運輸
+            </span>
+            <span className={styles.address}>
+              <i>住所</i>
+              <address>熊本県菊池市泗水町田島2724-1</address>
+            </span>
+            <ExternalLink href="tel:0968383515">
+              <span>TEL</span>0968-38-3515
+            </ExternalLink>
+            <ExternalLink href="tel:0968383715">
+              <span>FAX</span>0968-38-3715
+            </ExternalLink>
+          </div>
         </div>
       </article>
     </section>

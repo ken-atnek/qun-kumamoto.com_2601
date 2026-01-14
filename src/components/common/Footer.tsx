@@ -58,10 +58,10 @@ const Footer = () => {
           </div>
           <nav>
             <Link href="/">保有車両</Link>
-            <Link href="/">サービス</Link>
+            <Link href="/works/">事業内容</Link>
             <Link href="/company/">会社概要</Link>
             <Link href="/">採用情報</Link>
-            <Link href="/">各種ご依頼</Link>
+            <Link href="/contact/">各種ご依頼</Link>
           </nav>
           <div className={styles.boxAddress}>
             <span>〒861-1214</span>
@@ -81,7 +81,7 @@ const Footer = () => {
             </div>
           </div>
           <div className={styles.boxContact}>
-            <Link href="/">ご依頼・お問い合せ</Link>
+            <Link href="/">ご依頼・お問い合わせ</Link>
             <p>Copyright 九州運輸. All Rights Reserved.</p>
           </div>
         </article>

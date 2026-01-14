@@ -13,7 +13,7 @@ type Props = {
   titleJp?: string;
   titleEn?: string;
   description?: string;
-  variant?: 'works' | 'company' | 'recruit';
+  variant?: 'works' | 'company' | 'contact' | 'recruit';
 };
 
 export default function PageTitle({
