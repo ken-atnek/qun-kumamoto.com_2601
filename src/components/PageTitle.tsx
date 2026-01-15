@@ -12,13 +12,15 @@ import clsx from 'clsx';
 type Props = {
   titleJp?: string;
   titleEn?: string;
+  catchCopy?: string;
   description?: string;
-  variant?: 'works' | 'company' | 'contact' | 'recruit';
+  variant?: 'works' | 'company' | 'contact' | 'vehicles' | 'recruit';
 };
 
 export default function PageTitle({
   titleJp,
   titleEn,
+  catchCopy,
   description,
   variant,
 }: Props) {
@@ -41,6 +43,7 @@ export default function PageTitle({
         )}
         {titleJp && <h2>{titleJp}</h2>}
         {titleEn && <div className={styles.sidebarH2}>{titleEn}</div>}
+        {catchCopy && <p className={styles.catchCopy}>{catchCopy}</p>}
         {description && <p className={styles.description}>{description}</p>}
         {titleEn && <div className={styles.bgText}>{titleEn}</div>}
       </article>
