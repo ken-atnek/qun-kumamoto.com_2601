@@ -4,7 +4,6 @@
 @use "../styles/variable" as *;
 @use "../styles/svg" as *;
 @use "../styles/mixin" as *;
-
 .containerPageTop {
     @include flex-center;
     padding: 7em 2vw 0;

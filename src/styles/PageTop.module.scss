@@ -8,7 +8,6 @@
 /* stylelint-disable keyframes-name-pattern */
 /* stylelint-disable custom-property-pattern */
 // このファイル全体のルールを無効にする
-
 .itemH2 {
     font-size: FZ(16);
     letter-spacing: 0.1em;
@@ -58,6 +57,7 @@
         margin-top: 0.5em;
     }
 }
+
 /* =================================
  * 業務内容(WORKS)
  * ------------------------------ */
@@ -183,6 +183,7 @@
         }
     }
 }
+
 /* =================================
  * 会社概要(COMPANY)
  * ------------------------------ */
@@ -198,7 +199,7 @@
         z-index: -1;
     }
     &::before {
-        background: url(/images/top/company.webp) no-repeat center center /
+        background: url("/images/top/company.webp") no-repeat center center /
             cover;
     }
     &::after {
@@ -223,7 +224,7 @@
                 height: calc(100% + 5rem);
                 width: 50vw;
                 bottom: 0;
-                background: url(/images/top/company.webp) no-repeat center
+                background: url("/images/top/company.webp") no-repeat center
                     center / cover;
             }
             .itemH2 {
@@ -247,6 +248,7 @@
         }
     }
 }
+
 /* =================================
  * 採用情報(RECRUIT)
  * ------------------------------ */
@@ -272,7 +274,7 @@
                 height: calc(100% + 5rem);
                 width: 60vw;
                 bottom: 0;
-                background: url(/images/top/recruit.webp) no-repeat left
+                background: url("/images/top/recruit.webp") no-repeat left
                     bottom / contain;
             }
             .itemH2 {

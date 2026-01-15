@@ -79,7 +79,7 @@ const Header = () => {
           <Link href="/" className={styles.linkRecruit}>
             採用情報
           </Link>
-          <Link href="/" className={styles.linkContact}>
+          <Link href="/contact/" className={styles.linkContact}>
             ご依頼・お問い合せ
           </Link>
         </nav>

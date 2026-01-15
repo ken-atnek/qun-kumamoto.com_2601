@@ -47,20 +47,21 @@ $articleMaxWidth: 1158px;
     font-style: normal;
 }
 @mixin Oswald {
-    font-family: "Oswald", sans-serif;
+    font-family: Oswald, sans-serif;
     font-weight: 300;
     font-style: normal;
 }
 @mixin futura-pt-book {
-    font-family: "FuturaPT-Book";
+    font-family: FuturaPT-Book, sans-serif;
     font-weight: 400;
     font-style: normal;
 }
 @mixin futura-pt-demi {
-    font-family: "FuturaPT-Demi";
+    font-family: FuturaPT-Demi, sans-serif;
     font-weight: 400;
     font-style: normal;
 }
+
 /* =================================
  * カラー変数
  * ------------------------------ */
@@ -69,12 +70,11 @@ $base-white: #fffbf4;
 $bg-white: #fef4e5;
 $font-white: #f8f8f8;
 $sub-black: #5f4e37;
-$font-black: #111111;
+$font-black: #111;
 $main-green: #176d60;
 $dark-green: #003e38;
-$light-green: #ccff00;
+$light-green: #cf0;
 $sub-green: #6fb72f;
-
 $main-black: #574232;
 $complementary-red: #d0442e;
 $main-orange: #f29400;

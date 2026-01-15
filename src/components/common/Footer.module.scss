@@ -93,6 +93,7 @@
             }
         }
     }
+
     // メニュー
     .containerMenu {
         background-color: $dark-green;
@@ -196,6 +197,7 @@
             }
         }
     }
+
     // 亀の甲温泉・岡稲荷大明神
     .containerGroupShop {
         @include flex-center(column);

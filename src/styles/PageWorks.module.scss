@@ -26,7 +26,7 @@
         height: 77rem;
     }
     &::before {
-        background: url(/images/works/bg-service.webp) no-repeat center
+        background: url("/images/works/bg-service.webp") no-repeat center
             center/cover;
     }
     &::after {
@@ -49,7 +49,7 @@
                 translate: -50%;
                 bottom: calc(100% + 0.75em);
                 width: 40%;
-                background: url(/images/top/recruit.webp) no-repeat center
+                background: url("/images/top/recruit.webp") no-repeat center
                     center / contain;
                 aspect-ratio: 1280/843;
             }
@@ -182,6 +182,7 @@
         }
     }
 }
+
 /* =================================
  * 各種ご依頼
  * ------------------------------ */
@@ -195,9 +196,6 @@
         flex-direction: column;
         align-items: center;
         padding-top: 10rem;
-        .listRequest {
-            position: relative;
-        }
         .linkContact {
             width: 100%;
             max-width: 60rem;

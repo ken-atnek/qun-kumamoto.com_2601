@@ -144,7 +144,7 @@ $rslt = mb_send_mail($send_target, $subject, $mail_body, $headers, '-f' . $from_
 mb_internal_encoding($orgEncoding);
 
 if ($rslt) {
-  json_exit(200, ['success' => true, 'message' => 'メール送信成功']);
+  json_exit(200, ['success' => true, 'message' => 'お問い合わせを送信しました。']);
 }
 
 json_exit(500, ['success' => false, 'error' => 'メール送信に失敗しました']);

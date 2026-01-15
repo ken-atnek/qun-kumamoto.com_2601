@@ -49,6 +49,7 @@
         @include sp {
             max-width: unset;
         }
+
         // inputタグ初期化
         input {
             margin: 0;
@@ -81,6 +82,11 @@
             &::placeholder {
                 color: $sub-green;
             }
+
+            // 未入力項目のハイライト
+            &.isInvalid {
+                border: 3px solid #f00;
+            }
         }
         .boxForm,
         .statusConfirm {
@@ -95,7 +101,6 @@
                 grid-auto-flow: row;
                 gap: 8vw 0;
             }
-
             dl {
                 position: relative;
                 font-size: inherit;
@@ -143,7 +148,6 @@
                     }
                 }
             }
-
             .box_btn {
                 margin-top: 7rem;
                 grid-column: span 2;
@@ -238,6 +242,9 @@
                     gap: 0 1.6em;
                     padding-block: 0.5em;
                     justify-content: space-between;
+                    &.isInvalid {
+                        border: 3px solid #f00;
+                    }
                     label {
                         position: relative;
                         font-size: FZ(18);
@@ -256,25 +263,27 @@
                                 background-color: #f1f3f2;
                                 border: 1px solid $main-green;
                             }
-                            &::after {
-                                content: "";
-                                position: absolute;
-                                top: 50%;
-                                left: 0;
-                                transform: translate(4px, -50%);
-                                width: 0.6em;
-                                height: 0.6em;
-                                opacity: 0;
-                                transition: opacity 0.2s;
-                            }
                         }
                         input[type="radio"] {
                             position: absolute;
                             opacity: 0;
                             pointer-events: none;
                         }
-                        input[type="radio"]:checked + span::after {
-                            opacity: 1;
+                        &:has(input[type="radio"]:checked) {
+                            span {
+                                &::before {
+                                    background-color: $main-green;
+                                }
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    top: 50%;
+                                    translate: 0 -50%;
+                                    left: 5px;
+                                    width: 2.9rem;
+                                    @include svg-icon-check("fff");
+                                }
+                            }
                         }
                     }
                 }

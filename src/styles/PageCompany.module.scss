@@ -15,7 +15,7 @@
 .containerCompanyMessage {
     @include flex-center(column);
     padding: 10rem 2vw 8.3rem;
-    background: url(/images/company/bg-message.webp) no-repeat center
+    background: url("/images/company/bg-message.webp") no-repeat center
         center/cover;
     & > article {
         @include flex-center(column);
@@ -41,6 +41,7 @@
         }
     }
 }
+
 /* =================================
  * 会社概要
  * ------------------------------ */
@@ -55,7 +56,7 @@
         inset: 0;
     }
     &::before {
-        background: url(/images/company/bg-profile.webp) no-repeat center
+        background: url("/images/company/bg-profile.webp") no-repeat center
             center/cover;
     }
     &::after {
@@ -118,6 +119,7 @@
         }
     }
 }
+
 /* =================================
  * 経営の信条・アクセス
  * ------------------------------ */
@@ -147,7 +149,7 @@
             right: calc(100% + 6.6rem);
             width: 309px;
             bottom: 1rem;
-            background: url(/images/company/item-creed.webp) no-repeat center
+            background: url("/images/company/item-creed.webp") no-repeat center
                 center / contain;
             aspect-ratio: 309/380;
         }
@@ -209,7 +211,7 @@
                     top: 0;
                     right: calc(100% + 1rem);
                     width: 14rem;
-                    background: url(/images/top/recruit.webp) no-repeat center
+                    background: url("/images/top/recruit.webp") no-repeat center
                         center/contain;
                     aspect-ratio: 1284/843;
                 }
