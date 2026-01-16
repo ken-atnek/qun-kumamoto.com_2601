@@ -1,0 +1,288 @@
+/* =================================
+ * 	九州運輸 保有車両(vehicles)
+ * ------------------------------ */
+@use "variable" as *;
+@use "svg" as *;
+@use "mixin" as *;
+/* stylelint-disable no-descending-specificity */
+/* stylelint-disable keyframes-name-pattern */
+/* stylelint-disable custom-property-pattern */
+// このファイル全体のルールを無効にする
+
+/* =================================
+ * 車両リスト
+ * ------------------------------ */
+.containerVehiclesList {
+    @include flex-center(column);
+    padding: 0 2vw;
+    background-color: #f8f8f8;
+    .vehiclesList {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 50% 1fr;
+        font-size: inherit;
+        max-width: $articleMaxWidth;
+        gap: 0 1.3rem;
+        & > li {
+            position: relative;
+            font-size: inherit;
+            width: 100%;
+            grid-column: span 2;
+            display: grid;
+            grid-template-columns: subgrid;
+            padding-top: 4.3rem;
+            padding-bottom: 8.4rem;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 50%;
+                translate: -50%;
+                top: 0;
+                width: 100vw;
+                height: 25rem;
+                background-color: $main-green;
+                z-index: -1;
+            }
+            h3 {
+                grid-column-start: 2;
+                color: $font-white;
+                font-size: FZ(48);
+                font-weight: 500;
+                padding-left: 2.4rem;
+            }
+            .boxHead {
+                position: relative;
+                background-color: #fff;
+                grid-column: span 2;
+                margin-top: 3.7rem;
+                display: grid;
+                grid-template-columns: subgrid;
+                padding-block: 3.5rem;
+                font-size: inherit;
+                img {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    width: 50%;
+                }
+                .wrapHeadDetails {
+                    position: relative;
+                    font-size: inherit;
+                    grid-column-start: 2;
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    .innerTitle {
+                        font-size: inherit;
+                        @include flex-center(column);
+                        border-right: 1px solid #000;
+                        h4 {
+                            font-size: FZ(20);
+                            font-weight: 500;
+                            color: $main-green;
+                            letter-spacing: 0.1em;
+                        }
+                        .itemWeight {
+                            @include futura-pt-demi;
+                            font-size: FZ(128);
+                            line-height: 0.6em;
+                            height: 0.88em;
+                            translate: 0 -0.1em;
+                        }
+                        p {
+                            font-size: FZ(20);
+                            letter-spacing: 0.1em;
+                        }
+                    }
+                    .innerSize {
+                        font-size: inherit;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        h5 {
+                            background-color: $main-green;
+                            color: $font-white;
+                            font-size: FZ(20);
+                            font-weight: 500;
+                            letter-spacing: 0.1em;
+                            @include flex-center;
+                            width: 12em;
+                            height: 2.2em;
+                            border-radius: 100vmax;
+                        }
+                        ul {
+                            position: relative;
+                            font-size: inherit;
+                            display: grid;
+                            grid-template-columns: auto auto;
+                            gap: 1.1rem 0;
+                            margin-top: 2.7rem;
+                            padding-bottom: 0.5rem;
+                            li {
+                                font-size: inherit;
+                                grid-column: span 2;
+                                grid-template-columns: subgrid;
+                                display: grid;
+                                gap: 0 1.4rem;
+                                align-items: center;
+                                span {
+                                    font-size: FZ(24);
+                                    @include futura-pt-demi;
+                                    text-align: center;
+                                }
+                                .itemSize {
+                                    font-size: FZ(24);
+                                    @include futura-pt-book;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .sizeList {
+                position: relative;
+                margin-top: 2.5rem;
+                font-size: inherit;
+                grid-column-start: 2;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                & > li {
+                    font-size: inherit;
+                    display: flex;
+                    flex-direction: column;
+                    background-color: #fff;
+                    .itemImage {
+                        font-size: inherit;
+                        position: absolute;
+                        right: calc(100% + 3rem);
+                        top: 1rem;
+                        width: calc(100% - 2rem);
+                        span {
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            font-size: FZ(42);
+                            color: $font-white;
+                            font-weight: 700;
+                            @include flex-center;
+                            width: 10rem;
+                            aspect-ratio: 1;
+                            border-radius: 50%;
+                            background-color: $main-green;
+                            display: flex;
+                            gap: 0 0.05em;
+                            i {
+                                display: inline-block;
+                                font-size: 0.8em;
+                                translate: 0 0.1em;
+                            }
+                        }
+                        .fadeStack {
+                            position: relative;
+                        }
+                        .fadePrev,
+                        .fadeNext {
+                            position: absolute;
+                            inset: 0;
+                        }
+                        .fadePrev {
+                            opacity: 1;
+                            animation: fade-prev 0.25s ease-out forwards;
+                        }
+                        @keyframes fade-prev {
+                            from {
+                                opacity: 1;
+                            }
+                            to {
+                                opacity: 0;
+                            }
+                        }
+                        .fadeNext {
+                            opacity: 0;
+                            animation: fade-next 0.25s ease-out forwards;
+                        }
+                        @keyframes fade-next {
+                            from {
+                                opacity: 0;
+                            }
+                            to {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                    .headTitle {
+                        background-color: $main-green;
+                        color: $base-white;
+                        font-size: inherit;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 1.5rem 2rem 1.5rem 3.4rem;
+                        p {
+                            font-size: FZ(48);
+                            font-weight: 700;
+                            letter-spacing: 0.1em;
+                        }
+                        button {
+                            width: 172px;
+                            height: 44px;
+                            background-color: $sub-green;
+                            border-radius: 100vmax;
+                            font-size: inherit;
+                            padding-left: 2.6rem;
+                            @include transition;
+                            span {
+                                position: relative;
+                                font-size: FZ(20);
+                                text-transform: uppercase;
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    top: 50%;
+                                    translate: 0 -50%;
+                                    right: calc(100% + 1rem);
+                                    width: 2.4rem;
+                                    @include svg-icon-loupe("f8f8f8");
+                                }
+                            }
+                            &.isActive {
+                                opacity: 0.6;
+                                background-color: #ececec;
+                            }
+                        }
+                    }
+                    dl {
+                        position: relative;
+                        font-size: inherit;
+                        padding-block: 2.2rem;
+                        display: grid;
+                        grid-template-columns: auto auto;
+                        justify-content: center;
+                        div {
+                            font-size: inherit;
+                            grid-column: span 2;
+                            display: grid;
+                            grid-template-columns: subgrid;
+                            gap: 0 1rem;
+                            dt {
+                                font-size: FZ(18);
+                                font-weight: 500;
+                                letter-spacing: 0.06em;
+                                &::after {
+                                    content: "：";
+                                }
+                            }
+                            dd {
+                                font-size: FZ(18);
+                                font-weight: 500;
+                                letter-spacing: 0.06em;
+                                display: flex;
+                                gap: 0 0.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

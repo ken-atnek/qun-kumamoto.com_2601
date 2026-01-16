@@ -9,6 +9,7 @@ import type { Metadata } from 'next';
 import { isRealProduction } from '@/lib/env';
 
 import PageTitle from '@/components/PageTitle';
+import ContainerVehiclesList from '@/components/vehicles/ContainerVehiclesList';
 
 export const generateMetadata = (): Metadata => {
   return {
@@ -28,6 +29,7 @@ export default function PageVehicles() {
         description="地域密着と地域貢献をコンセプトに高品質輸送を展開"
         variant="vehicles"
       />
+      <ContainerVehiclesList />
     </>
   );
 }
