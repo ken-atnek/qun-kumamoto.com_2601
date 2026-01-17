@@ -25,7 +25,7 @@ export default function ContainerTopRecruit() {
             <br />
             ※免許取得費用は当社全額負
           </p>
-          <Link href="/">
+          <Link href="/recruit/">
             <span>採用情報を詳しく見る</span>
             <i></i>
           </Link>

@@ -159,14 +159,14 @@
                     @include drop-shadow;
                 }
             }
-            &[data-work="service"] {
+            &[data-work="works"] {
                 a {
                     &::before {
                         background-image: url("/images/top/works01.webp");
                     }
                 }
             }
-            &[data-work="request"] {
+            &[data-work="contact"] {
                 a {
                     &::before {
                         background-image: url("/images/top/works02.webp");

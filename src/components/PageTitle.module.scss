@@ -80,4 +80,10 @@
             }
         }
     }
+    &.variant-recruit {
+        padding-bottom: 1.6rem;
+        .bgText {
+            bottom: -0.4em;
+        }
+    }
 }

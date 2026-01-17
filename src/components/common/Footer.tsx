@@ -6,6 +6,7 @@
  * ======================================= */
 import Image from 'next/image';
 import styles from './Footer.module.scss';
+import ScrollLink from '@/components/common/ScrollLink';
 import ExternalLink from '@/components/common/ExternalLink';
 import Link from 'next/link';
 // import ExternalLink from '@/components/common/ExternalLink';
@@ -38,7 +39,7 @@ const Footer = () => {
             <h3>Access</h3>
             <span>熊本県菊池市泗水町田島2724-1</span>
           </ExternalLink>
-          <Link href="/" className={styles.itemContact}>
+          <Link href="/contact/" className={styles.itemContact}>
             <h3>Contact us</h3>
             <span>お問い合わせフォーム</span>
           </Link>
@@ -57,11 +58,11 @@ const Footer = () => {
             />
           </div>
           <nav>
-            <Link href="/vehicles/">保有車両</Link>
-            <Link href="/works/">事業内容</Link>
-            <Link href="/company/">会社概要</Link>
-            <Link href="/">採用情報</Link>
-            <Link href="/contact/">各種ご依頼</Link>
+            <ScrollLink href="/vehicles/">保有車両</ScrollLink>
+            <ScrollLink href="/works/">事業内容</ScrollLink>
+            <ScrollLink href="/company/">会社概要</ScrollLink>
+            <ScrollLink href="/recruit/">採用情報</ScrollLink>
+            <ScrollLink href="/contact/">各種ご依頼</ScrollLink>
           </nav>
           <div className={styles.boxAddress}>
             <span>〒861-1214</span>
@@ -81,7 +82,7 @@ const Footer = () => {
             </div>
           </div>
           <div className={styles.boxContact}>
-            <Link href="/">ご依頼・お問い合わせ</Link>
+            <Link href="/contact/">ご依頼・お問い合わせ</Link>
             <p>Copyright 九州運輸. All Rights Reserved.</p>
           </div>
         </article>

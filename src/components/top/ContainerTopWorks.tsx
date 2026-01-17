@@ -12,15 +12,15 @@ import Link from 'next/link';
 
 const worksItems = [
   {
-    id: 'service',
-    en: 'Service',
-    title: 'サービス',
+    id: 'works',
+    en: 'Works',
+    title: '業務内容',
     descriptions: ['九州運輸の高品質輸送', '倉庫管理サービスなど。'],
-    href: '/service',
+    href: '/works/',
   },
   {
-    id: 'request',
-    en: 'Request',
+    id: 'contact',
+    en: 'contact',
     title: '各種ご依頼',
     descriptions: [
       '・貸切運送',
@@ -28,14 +28,14 @@ const worksItems = [
       '・積み替え運送',
       '・一般貨物自動車運送業',
     ],
-    href: '/request',
+    href: '/contact/',
   },
   {
     id: 'variation',
     en: 'Variation',
     title: '保有車両',
     descriptions: ['県内〜全国へどこまでも、', '熊本の旬を運ぶ。'],
-    href: '/vehicles',
+    href: '/vehicles/',
   },
 ] as const;
 

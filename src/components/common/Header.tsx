@@ -76,7 +76,7 @@ const Header = () => {
           <Link href="/company/">会社概要</Link>
         </nav>
         <nav className={styles.subMenu}>
-          <Link href="/" className={styles.linkRecruit}>
+          <Link href="/recruit/" className={styles.linkRecruit}>
             採用情報
           </Link>
           <Link href="/contact/" className={styles.linkContact}>

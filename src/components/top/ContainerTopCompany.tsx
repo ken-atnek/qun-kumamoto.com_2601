@@ -24,7 +24,7 @@ export default function ContainerTopCompany() {
             <br />
             新時代の物流業を目指します。
           </p>
-          <Link href="">
+          <Link href="/company/">
             <span>詳しく見る</span>
             <i></i>
           </Link>

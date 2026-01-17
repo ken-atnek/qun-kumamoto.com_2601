@@ -71,7 +71,7 @@ export default function ContainerWorksRequest() {
             </li>
           ))}
         </ul>
-        <Link href="/" className={styles.linkContact}>
+        <Link href="/contact/" className={styles.linkContact}>
           <span>各種ご依頼はこちら</span>
           <i></i>
         </Link>
