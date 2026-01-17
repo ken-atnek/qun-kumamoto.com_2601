@@ -9,6 +9,18 @@
 /* stylelint-disable custom-property-pattern */
 // このファイル全体のルールを無効にする
 
+.sidebarH3 {
+    color: $sub-green;
+    font-size: FZ(16);
+    letter-spacing: 0.4em;
+    @include futura-pt-demi;
+    margin-bottom: 1.4rem;
+}
+.itemH3 {
+    font-size: FZ(48);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
 /* =================================
  * 熊本の旬を運ぶ
  * ------------------------------ */
@@ -239,5 +251,254 @@
                 }
             }
         }
+    }
+}
+/* =================================
+ * 福利厚生
+ * ------------------------------ */
+.containerRecruitBenefits {
+    @include flex-center(column);
+    padding: 6.6rem 2vw 7.8rem;
+    ul {
+        position: relative;
+        font-size: inherit;
+        width: 100%;
+        max-width: $articleMaxWidth;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        background-color: #f1f3f2;
+        border-top: 1px solid $sub-green;
+        border-left: 1px solid $sub-green;
+        margin-top: 4.4rem;
+        li {
+            position: relative;
+            grid-row: span 4;
+            display: grid;
+            grid-template-rows: subgrid;
+            font-size: inherit;
+            border-right: 1px solid $sub-green;
+            border-bottom: 1px solid $sub-green;
+            padding-bottom: 5rem;
+            gap: 1.7rem 0;
+            .no {
+                @include Oswald;
+                font-size: FZ(72);
+                font-weight: 300;
+                color: $sub-green;
+                position: relative;
+                justify-self: start;
+                margin-left: 2.2rem;
+                padding-top: 1rem;
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -3px;
+                    left: 0;
+                    width: 100%;
+                    height: 5px;
+                    background-color: $sub-green;
+                }
+            }
+            .icon {
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                margin-bottom: 1.8rem;
+                svg {
+                    fill: #010400;
+                    &.icon-benefit-01 {
+                        aspect-ratio: 115/96;
+                        max-width: 115px;
+                    }
+                    &.icon-benefit-02 {
+                        aspect-ratio: 115/89;
+                        max-width: 115px;
+                    }
+                    &.icon-benefit-03 {
+                        aspect-ratio: 103/115;
+                        max-width: 103px;
+                    }
+                    &.icon-benefit-04 {
+                        aspect-ratio: 115/87;
+                        max-width: 115px;
+                    }
+                    &.icon-benefit-05 {
+                        aspect-ratio: 115/115;
+                        max-width: 115px;
+                    }
+                    &.icon-benefit-06 {
+                        aspect-ratio: 100/115;
+                        max-width: 100px;
+                    }
+                    &.icon-benefit-07 {
+                        aspect-ratio: 115/101;
+                        max-width: 115px;
+                    }
+                    &.icon-benefit-08 {
+                        aspect-ratio: 105/115;
+                        max-width: 105px;
+                    }
+                    &.icon-benefit-09 {
+                        aspect-ratio: 111/115;
+                        max-width: 111px;
+                    }
+                }
+            }
+            h4 {
+                font-size: FZ(24);
+                font-weight: 700;
+                color: $main-green;
+                justify-self: center;
+            }
+            .description {
+                font-size: FZ(16);
+                font-weight: 500;
+                max-width: 19em;
+                justify-self: center;
+                display: flex;
+                flex-direction: column;
+                letter-spacing: 0.1em;
+                span {
+                    line-height: 1.6em;
+                }
+            }
+        }
+    }
+}
+/* =================================
+ * 先輩の声
+ * ------------------------------ */
+.containerRecruitVoice {
+    @include flex-center(column);
+    padding: 7.4rem 2vw 6.5rem;
+    background-color: $main-green;
+    article {
+        max-width: $articleMaxWidth;
+        background-color: #f8f8f8;
+        border-radius: 5rem;
+        padding-top: 8.7rem;
+        padding-bottom: 7.8rem;
+        @include flex-center(column);
+        .announce {
+            font-size: FZ(16);
+            letter-spacing: 0.1em;
+            margin-top: 1.4rem;
+        }
+        .boxHead {
+            position: relative;
+            font-size: inherit;
+            display: flex;
+            flex-direction: column;
+            gap: 6px 0;
+            align-items: center;
+            margin-top: 4.2rem;
+            margin-bottom: 6.6rem;
+            h4 {
+                color: $main-green;
+                font-size: FZ(20);
+                font-weight: 700;
+                letter-spacing: 0.1em;
+            }
+            p {
+                font-size: FZ(16);
+                letter-spacing: 0.1em;
+                line-height: 2em;
+                max-width: 44em;
+                text-align: justify;
+            }
+        }
+        .boxBottom {
+            position: relative;
+            width: 100%;
+            font-size: inherit;
+            max-width: 1028px;
+            padding-top: 4.5rem;
+            border-top: 1px solid $sub-green;
+            display: flex;
+            gap: 0 4rem;
+            .wrapImage {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem 0;
+                font-size: inherit;
+                img {
+                    width: 100%;
+                }
+                p {
+                    font-size: FZ(16);
+                    font-weight: 500;
+                    line-height: 2em;
+                    letter-spacing: 0.1em;
+                    color: $main-green;
+                }
+            }
+            .wrapDetails {
+                width: 50%;
+                font-size: inherit;
+                display: flex;
+                flex-direction: column;
+                gap: 3.4rem 0;
+                .itemDetail {
+                    position: relative;
+                    font-size: inherit;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.5rem 0;
+                    h4 {
+                        font-size: FZ(20);
+                        font-weight: 700;
+                        color: $main-green;
+                    }
+                    p {
+                        font-size: FZ(16);
+                        line-height: 2.2em;
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+    }
+}
+/* =================================
+ * 採用情報
+ * ------------------------------ */
+.containerRecruitInformation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 9rem 2vw 5rem;
+    color: $bg-white;
+    min-height: 54rem;
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+    }
+    &::before {
+        background: url(/images/recruit/bg-information.webp) no-repeat center
+            80%;
+    }
+    &::after {
+        background-color: rgba($dark-green, 0.8);
+    }
+    h3 {
+        color: $sub-green;
+        font-size: FZ(18);
+        font-weight: 500;
+        letter-spacing: 0.1em;
+    }
+    .titleEn {
+        font-size: FZ(64);
+        @include futura-pt-book;
+    }
+    p {
+        flex: 1;
+        @include flex-center;
+        font-size: FZ(24);
+        font-weight: 700;
+        letter-spacing: 0.12em;
     }
 }

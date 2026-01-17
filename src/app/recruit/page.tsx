@@ -12,6 +12,8 @@ import PageTitle from '@/components/PageTitle';
 import ContainerRecruitHead from '@/components/recruit/ContainerRecruitHead';
 import ContainerRecruitDailyFlow from '@/components/recruit/ContainerRecruitDailyFlow';
 import ContainerRecruitBenefits from '@/components/recruit/ContainerRecruitBenefits';
+import ContainerRecruitVoice from '@/components/recruit/ContainerRecruitVoice';
+import ContainerRecruitInformation from '@/components/recruit/ContainerRecruitInformation';
 
 export const generateMetadata = (): Metadata => {
   return {
@@ -28,6 +30,8 @@ export default function PageRecruit() {
       <ContainerRecruitHead />
       <ContainerRecruitDailyFlow />
       <ContainerRecruitBenefits />
+      <ContainerRecruitVoice />
+      <ContainerRecruitInformation />
     </>
   );
 }
