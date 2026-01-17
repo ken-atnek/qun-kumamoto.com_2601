@@ -197,3 +197,47 @@
         margin-top: 2rem;
     }
 }
+/* =================================
+ * ピックアップ
+ * ------------------------------ */
+.containerPickup {
+    @include flex-center(column);
+    padding: 7.2rem 2vw 6rem;
+    background-color: #ececec;
+    article {
+        display: grid;
+        grid-template-columns: auto auto;
+        width: fit-content;
+        gap: 0 10rem;
+        .boxDetails {
+            font-size: inherit;
+            grid-row: span 3;
+            display: grid;
+            grid-template-rows: subgrid;
+            gap: 2rem 0;
+            .itemImage {
+                display: flex;
+                justify-content: center;
+                align-self: flex-end;
+            }
+            h3 {
+                font-size: FZ(36);
+                letter-spacing: 0.1em;
+                font-weight: 500;
+                justify-self: center;
+            }
+            p {
+                font-size: FZ(20);
+                max-width: 20em;
+                letter-spacing: 0.1em;
+                text-align: justify;
+                line-height: 1.6em;
+                &.announce {
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

@@ -11,6 +11,7 @@ import { isRealProduction } from '@/lib/env';
 import PageTitle from '@/components/PageTitle';
 import ContainerRecruitHead from '@/components/recruit/ContainerRecruitHead';
 import ContainerRecruitDailyFlow from '@/components/recruit/ContainerRecruitDailyFlow';
+import ContainerRecruitBenefits from '@/components/recruit/ContainerRecruitBenefits';
 
 export const generateMetadata = (): Metadata => {
   return {
@@ -26,6 +27,7 @@ export default function PageRecruit() {
       <PageTitle titleEn="RECRUIT" titleJp="採用情報" variant="recruit" />
       <ContainerRecruitHead />
       <ContainerRecruitDailyFlow />
+      <ContainerRecruitBenefits />
     </>
   );
 }
