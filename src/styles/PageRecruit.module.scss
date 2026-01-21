@@ -494,11 +494,15 @@
         font-size: FZ(64);
         @include futura-pt-book;
     }
-    p {
+    .notice {
         flex: 1;
         @include flex-center;
         font-size: FZ(24);
         font-weight: 700;
         letter-spacing: 0.12em;
+    }
+    .blockJobList {
+        max-width: $articleMaxWidth;
+        padding-top: 7.4rem;
     }
 }

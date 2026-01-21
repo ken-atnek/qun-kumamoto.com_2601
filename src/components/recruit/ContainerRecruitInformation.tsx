@@ -6,8 +6,14 @@
  * ======================================= */
 
 import styles from '@/styles/PageRecruit.module.scss';
+import { recruitJobsIndex } from '@/data/recruit/jobsIndex';
+import RecruitJobCardList from './RecruitJobCardList';
 
 export default function ContainerRecruitInformation() {
+  const openJobs = recruitJobsIndex
+    .filter((job) => job.isOpen)
+    .sort((a, b) => (a.sortOrder ?? 999) - (b.sortOrder ?? 999));
+
   return (
     <section
       className={styles.containerRecruitInformation}
@@ -15,7 +21,14 @@ export default function ContainerRecruitInformation() {
     >
       <h3 id="recruitInformation">採用情報</h3>
       <span className={styles.titleEn}>RECRUIT</span>
-      <p>現在募集は行なっておりません。</p>
+
+      {openJobs.length === 0 ? (
+        <p className={styles.notice}>現在募集は行なっておりません。</p>
+      ) : (
+        <article className={styles.blockJobList}>
+          <RecruitJobCardList items={openJobs} variant="top" />
+        </article>
+      )}
     </section>
   );
 }
