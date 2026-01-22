@@ -18,13 +18,12 @@
     }
     &.listJobCardDetail {
         display: flex;
-
         gap: 0 0.9rem;
         margin-top: 7.1rem;
         width: 100%;
         .itemJobCard {
             max-width: 397px;
-            box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+            box-shadow: 0 0 5px 0 rgb(0 0 0 / 25%);
         }
     }
     .itemJobCard {
