@@ -6,7 +6,6 @@
 
 export type RecruitJobIndexItem = {
   id: string;
-  href: string;
   isOpen: boolean;
   sortOrder?: number;
   title: string;
@@ -25,8 +24,7 @@ export type RecruitJobIndexItem = {
 export const recruitJobsIndex: RecruitJobIndexItem[] = [
   // ▼サンプル（必要になったらコメント外して編集）
   {
-    id: 'driver-4t-bread',
-    href: '/recruit/driver-4t-bread',
+    id: 'jobCard01',
     isOpen: true,
     sortOrder: 0,
     title: '中型九州管内ドライバー【4t車】定期パン配送',

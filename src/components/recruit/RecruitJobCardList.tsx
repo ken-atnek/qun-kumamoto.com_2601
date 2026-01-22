@@ -26,7 +26,7 @@ export default function RecruitJobCardList({ items, variant = 'top' }: Props) {
       )}
     >
       {items.map((job) => (
-        <li key={job.id}>
+        <li key={job.id} className={styles.itemJobCard}>
           <RecruitJobCardItem job={job} />
         </li>
       ))}

@@ -7,8 +7,8 @@
 
 import type { RecruitJobIndexItem } from '@/data/recruit/jobsIndex';
 import styles from './RecruitJobCard.module.scss';
-import Link from 'next/link';
 import Image from 'next/image';
+import ScrollLink from '@/components/common/ScrollLink';
 
 type Props = {
   job: RecruitJobIndexItem;
@@ -25,16 +25,16 @@ export default function RecruitJobCardItem({ job }: Props) {
         {job.lead && <p>{job.lead}</p>}
 
         <ul>
-          <li>{job.employmentType}</li>
-          <li>{job.areaText}</li>
-          <li>{job.salaryText}</li>
+          <li className={styles.itemEmploymentType}>{job.employmentType}</li>
+          <li className={styles.itemAreaText}>{job.areaText}</li>
+          <li className={styles.itemSalaryText}>{job.salaryText}</li>
         </ul>
 
         {/* 補足 */}
       </div>
-      <Link href={job.href} className={styles.itemLink}>
+      <ScrollLink href={`/recruit/${job.id}`} className={styles.itemLink}>
         求人詳細はこちら
-      </Link>
+      </ScrollLink>
     </>
   );
 }

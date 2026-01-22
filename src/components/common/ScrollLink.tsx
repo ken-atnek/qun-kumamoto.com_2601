@@ -24,6 +24,12 @@ const normalizePath = (href: LinkProps['href']): string | null => {
   return href.pathname ?? null;
 };
 
+// ★ 追加：末尾スラッシュを除去して比較用に正規化
+const normalizeTrailingSlash = (path: string): string => {
+  if (path === '/') return '/';
+  return path.replace(/\/+$/, '');
+};
+
 const getHash = (href: LinkProps['href']): string | null => {
   if (typeof href !== 'string') return null;
   const parts = href.split('#');
@@ -44,12 +50,18 @@ export default function ScrollLink({
   const targetPath = normalizePath(href);
   const targetHash = getHash(href);
 
+  // ★ 比較用に正規化
+  const currentPath = normalizeTrailingSlash(pathname);
+  const compareTargetPath = targetPath
+    ? normalizeTrailingSlash(targetPath)
+    : null;
+
   const handleClick = (e: MouseEvent<HTMLAnchorElement>) => {
     // 同一ページなら「遷移」ではなく「スクロール」扱いにする
-    if (targetPath && pathname === targetPath) {
+    if (compareTargetPath && currentPath === compareTargetPath) {
       e.preventDefault();
 
-      // ハッシュがあれば、その要素へ
+      // ハッシュがあれば、その要素へスクロール
       if (targetHash) {
         const el = document.querySelector(targetHash);
         if (el) {
@@ -58,7 +70,7 @@ export default function ScrollLink({
         }
       }
 
-      // それ以外はトップへ
+      // ハッシュが無い場合はトップへ
       window.scrollTo({ top, behavior: smooth ? 'smooth' : 'auto' });
     }
   };

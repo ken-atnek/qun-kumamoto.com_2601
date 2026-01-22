@@ -8,7 +8,6 @@
 /* stylelint-disable keyframes-name-pattern */
 /* stylelint-disable custom-property-pattern */
 // このファイル全体のルールを無効にする
-
 .sidebarH3 {
     color: $sub-green;
     font-size: FZ(16);
@@ -21,6 +20,7 @@
     font-weight: 500;
     letter-spacing: 0.1em;
 }
+
 /* =================================
  * 熊本の旬を運ぶ
  * ------------------------------ */
@@ -36,7 +36,7 @@
         z-index: -1;
     }
     &::before {
-        background: url(/images/recruit/bg-head.webp) no-repeat center center;
+        background: url("/images/recruit/bg-head.webp") no-repeat center center;
     }
     &::after {
         background-color: rgba($dark-green, 0.8);
@@ -55,6 +55,7 @@
         margin-top: 2.7rem;
     }
 }
+
 /* =================================
  * 1日の業務の流れ
  * ------------------------------ */
@@ -209,6 +210,7 @@
         margin-top: 2rem;
     }
 }
+
 /* =================================
  * ピックアップ
  * ------------------------------ */
@@ -253,6 +255,7 @@
         }
     }
 }
+
 /* =================================
  * 福利厚生
  * ------------------------------ */
@@ -365,6 +368,7 @@
         }
     }
 }
+
 /* =================================
  * 先輩の声
  * ------------------------------ */
@@ -460,6 +464,7 @@
         }
     }
 }
+
 /* =================================
  * 採用情報
  * ------------------------------ */
@@ -467,7 +472,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 9rem 2vw 5rem;
+    padding: 9rem 2vw 10.6rem;
     color: $bg-white;
     min-height: 54rem;
     &::before,
@@ -478,7 +483,7 @@
         z-index: -1;
     }
     &::before {
-        background: url(/images/recruit/bg-information.webp) no-repeat center
+        background: url("/images/recruit/bg-information.webp") no-repeat center
             80%;
     }
     &::after {
