@@ -18,23 +18,38 @@
         rgba($main-green, 1) 50%,
         rgba($main-green, 0) 100%
     );
+    @include sp {
+        padding: 0 0 0 4vw;
+        height: 16vw;
+    }
     & > article {
         max-width: $articleMaxWidth;
         display: flex;
         align-items: center;
         gap: 0 3.2rem;
+        @include sp {
+            gap: 0 4vw;
+        }
         h3 {
             position: relative;
             font-size: FZ(48);
             font-weight: 500;
             color: $font-white;
             letter-spacing: 0.1em;
+            @include sp {
+                font-size: FZ(24);
+                width: max-content;
+            }
         }
         .sidebarH4 {
             color: $light-green;
             font-size: FZ(16);
             letter-spacing: 0.4em;
             text-transform: capitalize;
+            @include sp {
+                font-size: FZ(14);
+                flex: 1;
+            }
         }
     }
 }

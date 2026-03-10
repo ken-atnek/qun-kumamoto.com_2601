@@ -19,15 +19,38 @@
     padding-top: 1.3rem;
     padding-inline: 2vw;
     @include sp {
-        padding: 6vw 0 0 4vw;
+        padding: 0;
     }
     article {
         display: flex;
         justify-content: space-between;
         gap: 0 2em;
+        @include sp {
+            position: fixed;
+            justify-content: unset;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            height: 100dvh;
+            background-color: $dark-green;
+            flex-direction: column;
+            padding: 6vw;
+            translate: 100vw;
+            transition: 0.3s ease-out;
+            &.isOpen {
+                translate: 0;
+            }
+            &.closing {
+                translate: 100vw;
+            }
+        }
         h1 {
             img {
                 max-width: 36rem;
+                @include sp {
+                    width: 60vw;
+                }
             }
             align-self: center;
         }
@@ -35,20 +58,39 @@
             position: relative;
             font-size: inherit;
             display: flex;
+            @include sp {
+                flex-direction: column;
+            }
             a {
                 font-size: FZ(16);
                 color: $font-white;
                 letter-spacing: 0.1em;
                 @include flex-center;
+                @include sp {
+                    padding-block: 6vw;
+                }
+                &.isMobile {
+                    display: none;
+                    @include sp {
+                        display: flex;
+                    }
+                }
             }
         }
         .mainMenu {
             gap: 0 2em;
             margin-left: auto;
+            @include sp {
+                margin-left: unset;
+                margin-top: 10vw;
+            }
         }
         .subMenu {
             a {
                 height: 7.8rem;
+                @include sp {
+                    height: unset;
+                }
             }
             .linkRecruit {
                 background-color: $main-green;
@@ -69,9 +111,17 @@
         background-color: #fff;
         padding-bottom: 13px;
         box-shadow: 0 0 4px rgba(#000, 0.25);
+        @include sp {
+            padding-bottom: unset;
+            background-color: transparent;
+            box-shadow: unset;
+        }
         nav {
             a {
                 color: #111;
+                @include sp {
+                    color: #fff;
+                }
             }
         }
         .subMenu {

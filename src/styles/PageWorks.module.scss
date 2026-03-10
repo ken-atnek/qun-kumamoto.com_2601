@@ -15,6 +15,9 @@
 .containerWorksService {
     @include flex-center(column);
     padding: 10rem 2vw 6.3rem;
+    @include sp {
+        padding: 8vw 4vw;
+    }
     &::before,
     &::after {
         content: "";
@@ -24,6 +27,9 @@
         top: 0;
         width: 100%;
         height: 77rem;
+        @include sp {
+            height: 60%;
+        }
     }
     &::before {
         background: url("/images/works/bg-service.webp") no-repeat center
@@ -36,12 +42,18 @@
         @include flex-center(column);
         padding-top: 16rem;
         max-width: $articleMaxWidth;
+        @include sp {
+            padding-top: 36vw;
+        }
         h4 {
             position: relative;
             font-size: FZ(32);
             font-weight: 700;
             letter-spacing: 0.1em;
             color: $font-white;
+            @include sp {
+                font-size: FZ(24);
+            }
             &::before {
                 content: "";
                 position: absolute;
@@ -68,52 +80,82 @@
             color: $font-white;
             margin-top: 6.6rem;
             gap: 3.6rem 5rem;
+            @include sp {
+                grid-template-columns: unset;
+                grid-auto-flow: row;
+                gap: 6vw 0;
+                margin-top: 8vw;
+            }
             li {
                 position: relative;
                 font-size: FZ(20);
                 letter-spacing: 0.1em;
                 padding-left: 3em;
+                @include sp {
+                    font-size: FZ(16);
+                }
                 &::before {
                     content: "";
                     position: absolute;
                     left: 0;
                     top: 50%;
                     translate: 0 -50%;
+                    @include sp {
+                        width: 10vw;
+                    }
                 }
                 &:nth-of-type(1) {
                     &::before {
                         width: 3.2rem;
                         @include svg-works-service01("ccff00");
+                        @include sp {
+                            width: 6vw;
+                        }
                     }
                 }
                 &:nth-of-type(2) {
                     &::before {
                         width: 2.6rem;
                         @include svg-works-service02("ccff00");
+                        @include sp {
+                            width: 6vw;
+                        }
                     }
                 }
                 &:nth-of-type(3) {
                     &::before {
                         width: 3.2rem;
                         @include svg-works-service03("ccff00");
+                        @include sp {
+                            width: 6vw;
+                        }
                     }
                 }
                 &:nth-of-type(4) {
                     &::before {
                         width: 3rem;
                         @include svg-works-service04("ccff00");
+                        @include sp {
+                            width: 6vw;
+                        }
                     }
                 }
                 &:nth-of-type(5) {
                     &::before {
                         width: 3.2rem;
                         @include svg-works-service05("ccff00");
+                        @include sp {
+                            width: 6vw;
+                        }
                     }
                 }
                 &:nth-of-type(6) {
                     &::before {
                         width: 3.2rem;
                         @include svg-works-service06("ccff00");
+                        @include sp {
+                            width: 6vw;
+                        }
                     }
                 }
             }
@@ -125,6 +167,10 @@
             grid-template-columns: repeat(4, 1fr);
             font-size: inherit;
             margin-top: 9rem;
+            @include sp {
+                grid-template-columns: repeat(2, 1fr);
+                margin-top: 14vw;
+            }
             li {
                 position: relative;
                 font-size: inherit;
@@ -136,6 +182,12 @@
                 border-top: 1px solid $sub-green;
                 border-right: 1px solid $sub-green;
                 border-bottom: 1px solid $sub-green;
+                @include sp {
+                    padding: 2vw 4vw 4vw;
+                    &:nth-of-type(3) {
+                        border-left: 1px solid $sub-green;
+                    }
+                }
                 &:first-of-type {
                     border-left: 1px solid $sub-green;
                 }
@@ -146,6 +198,9 @@
                     font-weight: 300;
                     color: $sub-green;
                     width: fit-content;
+                    @include sp {
+                        font-size: FZ(48);
+                    }
                     &::before {
                         content: "";
                         position: absolute;
@@ -153,6 +208,9 @@
                         height: 5px;
                         background-color: $sub-green;
                         top: -1.3rem;
+                        @include sp {
+                            top: -2.9vw;
+                        }
                     }
                 }
                 img {
@@ -161,12 +219,20 @@
                     object-fit: cover;
                     aspect-ratio: 1;
                     margin-top: 2.1rem;
+                    @include sp {
+                        width: 80%;
+                        margin-top: 4vw;
+                    }
                 }
                 h5 {
                     margin-top: 3.1rem;
                     color: $dark-green;
                     font-size: FZ(24);
                     letter-spacing: 0.1em;
+                    @include sp {
+                        font-size: FZ(18);
+                        margin-top: 4vw;
+                    }
                 }
                 p {
                     font-size: FZ(16);
@@ -174,6 +240,10 @@
                     text-align: justify;
                     margin-top: 1.2rem;
                     line-height: 1.6em;
+                    @include sp {
+                        font-size: FZ(14);
+                        margin-top: 2vw;
+                    }
                     span {
                         font-size: inherit;
                     }
@@ -190,17 +260,26 @@
     @include flex-center(column);
     padding: 10rem 2vw 9rem;
     background-color: $dark-green;
+    @include sp {
+        padding: 6vw 4vw;
+    }
     & > article {
         max-width: $articleMaxWidth;
         display: flex;
         flex-direction: column;
         align-items: center;
         padding-top: 10rem;
+        @include sp {
+            padding-top: 20vw;
+        }
         .linkContact {
             width: 100%;
             max-width: 60rem;
             margin-top: 3.6rem;
             @include page-link;
+            @include sp {
+                margin-top: 18vw;
+            }
         }
         .listRequest {
             position: relative;
@@ -209,6 +288,10 @@
             grid-template-columns: repeat(4, 1fr);
             font-size: inherit;
             gap: 0 1.5rem;
+            @include sp {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2vw;
+            }
             li {
                 position: relative;
                 font-size: inherit;
@@ -216,6 +299,12 @@
                 grid-row: span 2;
                 display: grid;
                 grid-template-rows: subgrid;
+                @include sp {
+                    gap: 0;
+                    &:nth-of-type(2n) {
+                        translate: 0 14vw;
+                    }
+                }
                 img {
                     width: 100%;
                     aspect-ratio: 1.7;
@@ -229,10 +318,16 @@
                     flex-direction: column;
                     font-size: inherit;
                     gap: 0.9rem 0;
+                    @include sp {
+                        padding: 4vw 2vw 6vw;
+                    }
                     h4 {
                         font-size: FZ(20);
                         font-weight: 700;
                         letter-spacing: 0.1em;
+                        @include sp {
+                            font-size: FZ(16);
+                        }
                     }
                     p {
                         font-size: FZ(14);

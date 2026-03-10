@@ -29,7 +29,9 @@ const Footer = () => {
           <span>tel.</span>0968-38-3515
         </ExternalLink>
         <p>
-          弊社へのご依頼・各種お問い合わせ・求人へのご応募はフォームよりお問い合わせください。
+          弊社へのご依頼・各種お問い合わせ・求人へのご応募は
+          <br className="sp" />
+          フォームよりお問い合わせください。
         </p>
         <nav>
           <ExternalLink

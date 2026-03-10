@@ -42,9 +42,16 @@
     padding-left: 5rem;
     transition: 0.3s ease-out;
     padding-right: 1.8rem;
+    @include sp {
+        height: 14vw;
+        padding-left: 10vw;
+    }
     span {
         color: $font-white;
         @include transition(color);
+        @include sp {
+            font-size: FZ(14);
+        }
     }
     i {
         position: relative;
@@ -53,6 +60,9 @@
         border-radius: 50%;
         background-color: rgba($font-white, 0.4);
         @include transition(background-color);
+        @include sp {
+            width: 8vw;
+        }
         &::before {
             content: "";
             position: absolute;
@@ -63,6 +73,9 @@
             @include svg-arrow-triangle("F8F8F8");
             @include drop-shadow;
             @include transition(background-image);
+            @include sp {
+                width: 2.4vw;
+            }
         }
     }
     @include hover {

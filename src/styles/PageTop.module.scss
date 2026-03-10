@@ -17,12 +17,17 @@
     font-size: FZ(64);
     margin-top: 5.8rem;
     display: inline-block;
+    @include sp {
+        font-size: FZ(48);
+        margin-top: 2vw;
+    }
 }
 
 /* =================================
  * HERO
  * ------------------------------ */
 .containerTopHero {
+    position: relative;
     aspect-ratio: 1366/977;
     display: flex;
     flex-direction: column;
@@ -33,6 +38,9 @@
     color: $font-white;
     padding-left: 2vw;
     padding-bottom: 5.6rem;
+    @include sp {
+        padding: 4vw 6vw;
+    }
     .bgImage {
         position: absolute;
         top: 0;
@@ -48,6 +56,10 @@
         font-size: FZ(128);
         font-weight: 500;
         letter-spacing: 0.05em;
+        @include sp {
+            font-size: FZ(28);
+            letter-spacing: 0.08em;
+        }
     }
     .text {
         position: relative;
@@ -55,6 +67,24 @@
         letter-spacing: 0.1em;
         line-height: 1.6em;
         margin-top: 0.5em;
+        @include sp {
+            font-size: FZ(14);
+        }
+    }
+    .mobileImage {
+        display: none;
+        @include sp {
+            position: absolute;
+            top: 20vw;
+            left: 50%;
+            translate: 0 -50%;
+            z-index: 2;
+            display: block;
+            width: 80vw;
+            img {
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -64,6 +94,9 @@
 .containerTopWorks {
     @include flex-center(column);
     padding: 9.3rem 2vw 12rem;
+    @include sp {
+        padding: 6vw 4vw;
+    }
     .itemH2 {
         color: $sub-green;
     }
@@ -71,6 +104,10 @@
         font-size: FZ(16);
         letter-spacing: 0.1em;
         margin-top: 4rem;
+        @include sp {
+            font-size: FZ(14);
+            margin-top: 6vw;
+        }
     }
     .listWorks {
         position: relative;
@@ -81,6 +118,12 @@
         margin-top: 4rem;
         font-size: inherit;
         gap: 0 0.5rem;
+        @include sp {
+            grid-template-columns: unset;
+            grid-auto-flow: row;
+            gap: 2vw 0;
+            margin-top: 2vw;
+        }
         li {
             position: relative;
             font-size: inherit;
@@ -96,6 +139,9 @@
                 grid-template-rows: subgrid;
                 justify-items: center;
                 padding: 107px 0 12rem;
+                @include sp {
+                    padding: 6vw;
+                }
                 &::before,
                 &::after {
                     content: "";
@@ -126,6 +172,11 @@
                     gap: 0.2em 0;
                     margin-top: 6rem;
                     letter-spacing: 0.1em;
+                    @include sp {
+                        margin-top: 2vw;
+                        font-size: FZ(32);
+                        gap: 0;
+                    }
                     small {
                         font-size: 0.33em;
                     }
@@ -133,6 +184,10 @@
                 p {
                     font-size: FZ(16);
                     margin-top: 5rem;
+                    @include sp {
+                        margin-top: 2vw;
+                        font-size: FZ(14);
+                    }
                     span {
                         font-size: inherit;
                         line-height: 1.6em;
@@ -148,6 +203,11 @@
                 aspect-ratio: 1;
                 border-radius: 50%;
                 background-color: $sub-green;
+                @include sp {
+                    bottom: 4vw;
+                    right: 2vw;
+                    width: 15vw;
+                }
                 &::after {
                     content: "";
                     position: absolute;
@@ -190,6 +250,9 @@
 .containerTopCompany {
     padding: 0 2vw 5.3rem;
     @include flex-center;
+    @include sp {
+        padding: 8vw 4vw;
+    }
     &::before,
     &::after {
         content: "";
@@ -209,6 +272,9 @@
         max-width: $articleMaxWidth;
         display: flex;
         justify-content: flex-end;
+        @include sp {
+            justify-content: stretch;
+        }
         .boxContents {
             position: relative;
             width: 50%;
@@ -217,6 +283,10 @@
             flex-direction: column;
             padding-top: 7.3rem;
             padding-left: 7.6rem;
+            @include sp {
+                padding: 0;
+                width: 100%;
+            }
             &::before {
                 content: "";
                 position: absolute;
@@ -226,6 +296,9 @@
                 bottom: 0;
                 background: url("/images/top/company.webp") no-repeat center
                     center / cover;
+                @include sp {
+                    display: none;
+                }
             }
             .itemH2 {
                 color: $light-green;
@@ -239,11 +312,18 @@
                 margin-top: 4rem;
                 color: $font-white;
                 line-height: 2em;
+                @include sp {
+                    margin-top: 4vw;
+                }
             }
             a {
                 max-width: 40rem;
                 margin-top: 8.5rem;
                 @include page-link;
+                @include sp {
+                    max-width: unset;
+                    margin-top: 6vw;
+                }
             }
         }
     }
@@ -256,6 +336,9 @@
     padding: 7.5rem 2vw 6.1rem;
     @include flex-center;
     background-color: $main-green;
+    @include sp {
+        padding: 8vw 4vw;
+    }
     article {
         max-width: $articleMaxWidth;
         display: flex;
@@ -267,6 +350,10 @@
             color: $font-white;
             padding-left: 10.5rem;
             padding-right: 6.1rem;
+            @include sp {
+                padding: unset;
+                width: 100%;
+            }
             &::after {
                 content: "";
                 position: absolute;
@@ -276,6 +363,11 @@
                 bottom: 0;
                 background: url("/images/top/recruit.webp") no-repeat left
                     bottom / contain;
+                @include sp {
+                    left: 55vw;
+                    height: 35vw;
+                    bottom: 18vw;
+                }
             }
             .itemH2 {
                 color: $light-green;
@@ -285,17 +377,29 @@
                 letter-spacing: 0.1em;
                 font-weight: 500;
                 margin-top: 1.7rem;
+                @include sp {
+                    font-size: FZ(16);
+                    margin-top: 2vw;
+                }
             }
             .announce {
                 font-size: FZ(16);
                 letter-spacing: 0.1em;
                 margin-top: 5rem;
                 line-height: 2em;
+                @include sp {
+                    margin-top: 8vw;
+                    font-size: FZ(14);
+                }
             }
             a {
                 max-width: 40rem;
                 margin-top: 1.7rem;
                 @include page-link;
+                @include sp {
+                    max-width: unset;
+                    width: 100%;
+                }
             }
         }
     }

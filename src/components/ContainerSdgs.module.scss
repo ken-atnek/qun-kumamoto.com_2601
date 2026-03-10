@@ -11,13 +11,23 @@
 .containerSdgs {
     @include flex-center(column);
     padding: 9rem 2vw 6.8rem;
+    @include sp {
+        padding: 8vw 4vw;
+    }
     .itemLogo {
         max-width: 493px;
+        @include sp {
+            max-width: unset;
+            width: 70vw;
+        }
     }
     h2 {
         margin-top: 3.1rem;
         font-size: FZ(16);
         font-weight: 500;
+        @include sp {
+            margin-top: 4vw;
+        }
     }
     ul {
         display: grid;
@@ -25,6 +35,11 @@
         max-width: $articleMaxWidth;
         gap: 0 1.5rem;
         margin-top: 6.3rem;
+        @include sp {
+            gap: 2vw;
+            grid-template-columns: repeat(3, 1fr);
+            margin-top: 4vw;
+        }
         li {
             width: 100%;
         }
