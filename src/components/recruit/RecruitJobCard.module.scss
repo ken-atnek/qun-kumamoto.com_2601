@@ -15,6 +15,11 @@
     &.listJobCardTop {
         grid-template-columns: repeat(3, 1fr);
         gap: 4.2rem 0.9rem;
+        @include sp {
+            display: flex;
+            flex-direction: column;
+            gap: 4vw 0;
+        }
     }
     &.listJobCardDetail {
         display: flex;

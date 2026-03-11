@@ -19,6 +19,9 @@
     font-size: FZ(48);
     font-weight: 500;
     letter-spacing: 0.1em;
+    @include sp {
+        font-size: FZ(32);
+    }
 }
 
 /* =================================
@@ -28,6 +31,9 @@
     @include flex-center(column);
     padding: 8.3rem 2vw;
     color: $bg-white;
+    @include sp {
+        padding: 10vw 4vw;
+    }
     &::before,
     &::after {
         content: "";
@@ -45,6 +51,9 @@
         font-size: FZ(112);
         letter-spacing: 0.05em;
         font-weight: 500;
+        @include sp {
+            font-size: 9vw;
+        }
     }
     p {
         font-size: FZ(32);
@@ -53,6 +62,10 @@
         letter-spacing: 0.05em;
         line-height: 1.6em;
         margin-top: 2.7rem;
+        @include sp {
+            font-size: FZ(16);
+            font-weight: 400;
+        }
     }
 }
 
@@ -62,10 +75,16 @@
 .containerRecruitDailyFlow {
     @include flex-center(column);
     padding: 8rem 2vw 5.8rem;
+    @include sp {
+        padding: 8vw 4vw;
+    }
     h3 {
         font-size: FZ(48);
         font-weight: 500;
         letter-spacing: 0.1em;
+        @include sp {
+            font-size: FZ(32);
+        }
     }
     .topTitle {
         @include flex-center;
@@ -79,6 +98,11 @@
         border-radius: 100vmax;
         letter-spacing: 0.1em;
         margin-top: 5.7rem;
+        @include sp {
+            max-width: unset;
+            font-size: FZ(20);
+            margin-top: 4vw;
+        }
     }
     .boxDailyFlowColumn {
         position: relative;
@@ -87,12 +111,22 @@
         grid-template-columns: repeat(3, 1fr);
         margin-top: 5rem;
         gap: 0 3rem;
+        @include sp {
+            grid-template-columns: unset;
+            grid-auto-flow: row;
+            width: 100%;
+            gap: 10vw 0;
+        }
         .dailyFlowColumn {
             position: relative;
             font-size: inherit;
             display: flex;
             flex-direction: column;
             gap: 2rem 0;
+            @include sp {
+                width: 100%;
+                gap: 4vw 0;
+            }
             h4 {
                 font-size: FZ(20);
                 font-weight: 500;
@@ -208,6 +242,10 @@
         font-weight: 500;
         letter-spacing: 0.1em;
         margin-top: 2rem;
+        @include sp {
+            font-size: FZ(14);
+            padding: 3vw 4vw;
+        }
     }
 }
 
@@ -218,27 +256,48 @@
     @include flex-center(column);
     padding: 7.2rem 2vw 6rem;
     background-color: #ececec;
+    @include sp {
+        padding: 8vw 4vw;
+    }
     article {
         display: grid;
         grid-template-columns: auto auto;
         width: fit-content;
         gap: 0 10rem;
+        @include sp {
+            display: flex;
+            flex-direction: column;
+            gap: 6vw 0;
+        }
         .boxDetails {
             font-size: inherit;
             grid-row: span 3;
             display: grid;
             grid-template-rows: subgrid;
             gap: 2rem 0;
+            @include sp {
+                gap: 2vw 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
             .itemImage {
                 display: flex;
                 justify-content: center;
                 align-self: flex-end;
+                @include sp {
+                    max-width: 60vw;
+                    align-self: center;
+                }
             }
             h3 {
                 font-size: FZ(36);
                 letter-spacing: 0.1em;
                 font-weight: 500;
                 justify-self: center;
+                @include sp {
+                    font-size: FZ(28);
+                }
             }
             p {
                 font-size: FZ(20);
@@ -246,6 +305,10 @@
                 letter-spacing: 0.1em;
                 text-align: justify;
                 line-height: 1.6em;
+                @include sp {
+                    font-size: FZ(16);
+                    max-width: unset;
+                }
                 &.announce {
                     text-align: center;
                     display: flex;
@@ -262,6 +325,9 @@
 .containerRecruitBenefits {
     @include flex-center(column);
     padding: 6.6rem 2vw 7.8rem;
+    @include sp {
+        padding: 8vw 4vw;
+    }
     ul {
         position: relative;
         font-size: inherit;
@@ -273,6 +339,9 @@
         border-top: 1px solid $sub-green;
         border-left: 1px solid $sub-green;
         margin-top: 4.4rem;
+        @include sp {
+            grid-template-columns: repeat(2, 1fr);
+        }
         li {
             position: relative;
             grid-row: span 4;
@@ -283,6 +352,11 @@
             border-bottom: 1px solid $sub-green;
             padding-bottom: 5rem;
             gap: 1.7rem 0;
+            @include sp {
+                gap: 2vw 0;
+                padding-inline: 2vw;
+                padding-bottom: 6vw;
+            }
             .no {
                 @include Oswald;
                 font-size: FZ(72);
@@ -292,6 +366,10 @@
                 justify-self: start;
                 margin-left: 2.2rem;
                 padding-top: 1rem;
+                @include sp {
+                    font-size: FZ(56);
+                    margin-left: 2vw;
+                }
                 &::before {
                     content: "";
                     position: absolute;
@@ -352,6 +430,9 @@
                 font-weight: 700;
                 color: $main-green;
                 justify-self: center;
+                @include sp {
+                    font-size: FZ(18);
+                }
             }
             .description {
                 font-size: FZ(16);
@@ -361,6 +442,10 @@
                 display: flex;
                 flex-direction: column;
                 letter-spacing: 0.1em;
+                @include sp {
+                    font-size: FZ(14);
+                    text-align: justify;
+                }
                 span {
                     line-height: 1.6em;
                 }
@@ -376,6 +461,9 @@
     @include flex-center(column);
     padding: 7.4rem 2vw 6.5rem;
     background-color: $main-green;
+    @include sp {
+        padding: 8vw 4vw;
+    }
     article {
         max-width: $articleMaxWidth;
         background-color: #f8f8f8;
@@ -383,10 +471,16 @@
         padding-top: 8.7rem;
         padding-bottom: 7.8rem;
         @include flex-center(column);
+        @include sp {
+            padding: 6vw 4vw 8vw;
+        }
         .announce {
             font-size: FZ(16);
             letter-spacing: 0.1em;
             margin-top: 1.4rem;
+            @include sp {
+                text-align: center;
+            }
         }
         .boxHead {
             position: relative;
@@ -397,11 +491,18 @@
             align-items: center;
             margin-top: 4.2rem;
             margin-bottom: 6.6rem;
+            @include sp {
+                margin-top: 2vw;
+                margin-bottom: 4vw;
+            }
             h4 {
                 color: $main-green;
                 font-size: FZ(20);
                 font-weight: 700;
                 letter-spacing: 0.1em;
+                @include sp {
+                    font-size: FZ(16);
+                }
             }
             p {
                 font-size: FZ(16);
@@ -409,6 +510,11 @@
                 line-height: 2em;
                 max-width: 44em;
                 text-align: justify;
+                @include sp {
+                    max-width: unset;
+                    font-size: FZ(14);
+                    line-height: 1.6em;
+                }
             }
         }
         .boxBottom {
@@ -420,12 +526,20 @@
             border-top: 1px solid $sub-green;
             display: flex;
             gap: 0 4rem;
+            @include sp {
+                flex-direction: column;
+                gap: 6vw 0;
+                padding-top: 6vw;
+            }
             .wrapImage {
                 flex: 1;
                 display: flex;
                 flex-direction: column;
                 gap: 1.5rem 0;
                 font-size: inherit;
+                @include sp {
+                    gap: 2vw 0;
+                }
                 img {
                     width: 100%;
                 }
@@ -435,6 +549,9 @@
                     line-height: 2em;
                     letter-spacing: 0.1em;
                     color: $main-green;
+                    @include sp {
+                        line-height: 1.6em;
+                    }
                 }
             }
             .wrapDetails {
@@ -443,21 +560,35 @@
                 display: flex;
                 flex-direction: column;
                 gap: 3.4rem 0;
+                @include sp {
+                    gap: 4vw 0;
+                    width: 100%;
+                }
                 .itemDetail {
                     position: relative;
                     font-size: inherit;
                     display: flex;
                     flex-direction: column;
                     gap: 1.5rem 0;
+                    @include sp {
+                        gap: 2vw 0;
+                    }
                     h4 {
                         font-size: FZ(20);
                         font-weight: 700;
                         color: $main-green;
+                        @include sp {
+                            font-size: FZ(18);
+                        }
                     }
                     p {
                         font-size: FZ(16);
                         line-height: 2.2em;
                         text-align: justify;
+                        @include sp {
+                            font-size: FZ(14);
+                            line-height: 1.6em;
+                        }
                     }
                 }
             }
@@ -475,6 +606,10 @@
     padding: 9rem 2vw 10.6rem;
     color: $bg-white;
     min-height: 54rem;
+    @include sp {
+        padding: 8vw 4vw;
+        min-height: 50vw;
+    }
     &::before,
     &::after {
         content: "";
@@ -494,10 +629,16 @@
         font-size: FZ(18);
         font-weight: 500;
         letter-spacing: 0.1em;
+        @include sp {
+            font-size: FZ(16);
+        }
     }
     .titleEn {
         font-size: FZ(64);
         @include futura-pt-book;
+        @include sp {
+            font-size: FZ(56);
+        }
     }
     .notice {
         flex: 1;
@@ -509,5 +650,8 @@
     .blockJobList {
         max-width: $articleMaxWidth;
         padding-top: 7.4rem;
+        @include sp {
+            padding-top: 4vw;
+        }
     }
 }

@@ -212,7 +212,10 @@ export default function ContainerContactForm() {
     <>
       <section className={styles.containerContactForm}>
         <div className={styles.boxHead}>
-          <p>＜お急ぎの場合＞ お急ぎの方は、お電話にてお問い合わせください。</p>
+          <p>
+            ＜お急ぎの場合＞ <br className="sp" />
+            お急ぎの方は、お電話にてお問い合わせください。
+          </p>
           <ExternalLink href="tel:0968383515">
             <span>TEL.</span>0968-38-3515
           </ExternalLink>
