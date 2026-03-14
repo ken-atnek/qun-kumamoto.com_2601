@@ -8,14 +8,23 @@ import { recruitJobsIndex } from '@/data/recruit/jobsIndex';
 import RecruitDetailsHead from '@/components/recruit/RecruitDetailsHead';
 import RecruitDetailsContents from '@/components/recruit/RecruitDetailsContents';
 
-// ▼ 詳細データ（とりあえず jobCard01 のみ）
+// ▼ 詳細データ
 import { jobCard01Detail } from '@/data/recruit/jobDetails/jobCard01';
+import { jobCard02Detail } from '@/data/recruit/jobDetails/jobCard02';
+import { jobCard03Detail } from '@/data/recruit/jobDetails/jobCard03';
+
 import RecruitDetailsJobList from '@/components/recruit/RecruitDetailsJobList';
 
 type PageProps = {
   params: Promise<{
     id: string;
   }>;
+};
+
+const jobDetailsMap = {
+  [jobCard01Detail.id]: jobCard01Detail,
+  [jobCard02Detail.id]: jobCard02Detail,
+  [jobCard03Detail.id]: jobCard03Detail,
 };
 
 // 静的書き出し用（output: 'export' 運用）
@@ -33,8 +42,7 @@ export default async function RecruitJobDetailPage(props: PageProps) {
   const job = recruitJobsIndex.find((j) => j.id === id);
   if (!job) notFound();
 
-  const detail = id === jobCard01Detail.id ? jobCard01Detail : null;
-  if (!detail) notFound();
+  const detail = jobDetailsMap[id as keyof typeof jobDetailsMap] ?? null;
 
   return (
     <>

@@ -8,7 +8,6 @@ import Image from 'next/image';
 import styles from './Footer.module.scss';
 import ScrollLink from '@/components/common/ScrollLink';
 import ExternalLink from '@/components/common/ExternalLink';
-import Link from 'next/link';
 // import ExternalLink from '@/components/common/ExternalLink';
 const Footer = () => {
   return (
@@ -41,10 +40,10 @@ const Footer = () => {
             <h3>Access</h3>
             <span>熊本県菊池市泗水町田島2724-1</span>
           </ExternalLink>
-          <Link href="/contact/" className={styles.itemContact}>
+          <ScrollLink href="/contact/" className={styles.itemContact}>
             <h3>Contact us</h3>
             <span>お問い合わせフォーム</span>
-          </Link>
+          </ScrollLink>
         </nav>
       </section>
       {/* メニュー */}
@@ -84,7 +83,7 @@ const Footer = () => {
             </div>
           </div>
           <div className={styles.boxContact}>
-            <Link href="/contact/">ご依頼・お問い合わせ</Link>
+            <ScrollLink href="/contact/">ご依頼・お問い合わせ</ScrollLink>
             <p>Copyright 九州運輸. All Rights Reserved.</p>
           </div>
         </article>

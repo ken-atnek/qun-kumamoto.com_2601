@@ -6,7 +6,7 @@
  * ======================================= */
 
 import styles from '@/styles/PageTop.module.scss';
-import Link from 'next/link';
+import ScrollLink from '@/components/common/ScrollLink';
 
 // import Image from 'next/image';
 
@@ -24,10 +24,10 @@ export default function ContainerTopCompany() {
             <br />
             新時代の物流業を目指します。
           </p>
-          <Link href="/company/">
+          <ScrollLink href="/company/">
             <span>詳しく見る</span>
             <i></i>
-          </Link>
+          </ScrollLink>
         </div>
       </article>
     </section>

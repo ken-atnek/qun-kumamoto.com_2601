@@ -16,7 +16,8 @@ type Props = {
 };
 
 export default function RecruitDetailsHead({ job, detail }: Props) {
-  const imageSrc = detail.intro?.imgSrc;
+  const imageSrc01 = detail.intro?.imgSrc01;
+  const imageSrc02 = detail.intro?.imgSrc02;
 
   return (
     <section
@@ -45,26 +46,22 @@ export default function RecruitDetailsHead({ job, detail }: Props) {
           <div className={styles.introBlock}>
             <div className={styles.introImage}>
               {/* 画像（src undefined 防止） */}
-              {imageSrc && (
+              {imageSrc01 && (
                 <Image
-                  src={imageSrc}
+                  src={imageSrc01}
                   alt={job.title}
                   width={640}
                   height={420}
                 />
               )}
-
-              {/* 画像横テキスト（配列＆空配列ガード） */}
-              {detail.intro.imgText?.length ? (
-                <p>
-                  {detail.intro.imgText.map((line, index) => (
-                    <span key={index}>
-                      {line}
-                      <br />
-                    </span>
-                  ))}
-                </p>
-              ) : null}
+              {imageSrc02 && (
+                <Image
+                  src={imageSrc02}
+                  alt={job.title}
+                  width={640}
+                  height={420}
+                />
+              )}
             </div>
 
             <div className={styles.introText}>

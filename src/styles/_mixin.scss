@@ -79,14 +79,14 @@
         }
     }
     @include hover {
-        background-color: $font-white;
+        background-color: #000e;
         span {
-            color: $main-green;
+            color: #fff;
         }
         i {
-            background-color: rgba($main-green, 0.4);
+            background-color: rgba(#f8f8f8, 0.4);
             &::before {
-                @include svg-arrow-triangle("176d60");
+                @include svg-arrow-triangle("ffffff");
             }
         }
     }

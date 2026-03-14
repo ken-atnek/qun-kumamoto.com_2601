@@ -21,8 +21,8 @@ export type RecruitJobDetailData = {
     catch?: string; // 「未経験歓迎【賞与年3回】...」など
   };
   intro?: {
-    imgSrc?: string; //画像
-    imgText?: string[]; //画像
+    imgSrc01?: string; //画像
+    imgSrc02?: string; //画像
     titleMain: string; // 詳細ページの導入見出し
     titleMainText: string[]; // 導入文（複数段落OK）
     titleSub?: string; // 詳細ページの導入見出し

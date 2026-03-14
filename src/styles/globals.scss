@@ -3,7 +3,9 @@
 
 // @import "swiper/css";
 // @import "swiper/css/navigation";
-
+html {
+    scroll-behavior: auto;
+}
 /* =================================
  * フォント読み込み
  * ------------------------------ */
