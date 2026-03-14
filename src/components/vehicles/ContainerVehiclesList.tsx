@@ -41,7 +41,7 @@ function CategoryBlock({ category }: { category: VehicleCategory }) {
   }, [prevId, category.items]);
 
   return (
-    <li>
+    <li className={`${styles.item} ${styles[category.id] ?? ''}`}>
       <h3>{category.name}</h3>
 
       <div className={styles.boxHead}>

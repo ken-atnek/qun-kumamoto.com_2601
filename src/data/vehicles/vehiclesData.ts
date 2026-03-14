@@ -32,11 +32,11 @@ export type VehicleCategory = {
 
 export const vehiclesData: VehicleCategory[] = [
   {
-    id: 'wing',
+    id: 'wing-max',
     name: '増トンウイング車',
     items: [
       {
-        id: 'wing-13',
+        id: 'wing-max-13',
         ton: 13,
         isFeatured: true,
         typeLabel: 'ウイング',
@@ -45,68 +45,118 @@ export const vehiclesData: VehicleCategory[] = [
         cargoSize: { w: 2400, h: 2800, d: 9600 },
       },
       {
-        id: 'wing-13b',
+        id: 'wing-max-13b',
         ton: 13,
         typeLabel: 'ウイング、ゲート車',
-        frontImage: '/images/vehicles/wing/13t.webp',
-        rearImage: '/images/vehicles/wing/13t.webp',
+        frontImage: '/images/vehicles/1787_f.webp',
+        rearImage: '/images/vehicles/1787_b.webp',
         cargoSize: { w: 2400, h: 2800, d: 9600 },
       },
       {
-        id: 'wing-13c',
+        id: 'wing-max-13c',
         ton: 13,
         typeLabel: 'ウイング、空調車',
-        frontImage: '/images/vehicles/wing/13t.webp',
-        rearImage: '/images/vehicles/wing/13t.webp',
+        frontImage: '/images/vehicles/4496_f.webp',
+        rearImage: '/images/vehicles/4496_b.webp',
         cargoSize: { w: 2400, h: 2800, d: 9600 },
       },
     ],
   },
-
-  // {
-  //   id: 'box',
-  //   name: '箱　車',
-  //   categoryImage: '/images/vehicles/box/main.webp',
-  //   items: [
-  //     {
-  //       id: 'box-4',
-  //       ton: 4,
-  //       isFeatured: true,
-  //       tonImage: '/images/vehicles/box/4t.webp',
-  //       exterior: { length: undefined, width: undefined, height: undefined },
-  //       interior: { length: undefined, width: undefined, height: undefined },
-  //     },
-  //     {
-  //       id: 'box-2',
-  //       ton: 2,
-  //       tonImage: '/images/vehicles/box/2t.webp',
-  //       exterior: { length: 4550, width: 2200, height: 2400 },
-  //       interior: { length: 4450, width: 1900, height: 1900 },
-  //     },
-  //   ],
-  // },
-
-  // {
-  //   id: 'gate',
-  //   name: 'ゲート車',
-  //   categoryImage: '/images/vehicles/gate/main.webp',
-  //   items: [
-  //     {
-  //       id: 'gate-10',
-  //       ton: 10,
-  //       isFeatured: true,
-  //       tonImage: '/images/vehicles/gate/10t.webp',
-  //       cargoSize: { w: 9600, h: 2400, d: 2170 },
-  //       exterior: { length: 9750, width: 2500, height: 3000 },
-  //       interior: { length: 9600, width: 2400, height: 2550 },
-  //     },
-  //     {
-  //       id: 'gate-4',
-  //       ton: 4,
-  //       tonImage: '/images/vehicles/gate/4t.webp',
-  //       exterior: { length: 6400, width: 2450, height: 2350 },
-  //       interior: { length: 6050, width: 2330, height: 2170 },
-  //     },
-  //   ],
-  // },
+  {
+    id: 'wing',
+    name: 'ウイング車',
+    items: [
+      {
+        id: 'wing-4',
+        ton: 4,
+        isFeatured: true,
+        typeLabel: 'ウイング',
+        frontImage: '/images/vehicles/9532_f.webp',
+        rearImage: '/images/vehicles/9532_b.webp',
+        cargoSize: { w: 2290, h: 2400, d: 6200 },
+      },
+      {
+        id: 'wing-4b',
+        ton: 4,
+        typeLabel: 'ウイング、ゲート車',
+        frontImage: '/images/vehicles/9306_f.webp',
+        rearImage: '/images/vehicles/9306_b.webp',
+        cargoSize: { w: 2290, h: 2400, d: 6200 },
+      },
+    ],
+  },
+  {
+    id: 'flatbed',
+    name: '平ボディ',
+    items: [
+      {
+        id: 'flatbed-13',
+        ton: 13,
+        isFeatured: true,
+        frontImage: '/images/vehicles/8850_f.webp',
+        rearImage: '/images/vehicles/8850_b.webp',
+        cargoSize: { w: 2350, d: 9550 },
+      },
+      {
+        id: 'wing-4',
+        ton: 4,
+        frontImage: '/images/vehicles/7897_f.webp',
+        rearImage: '/images/vehicles/7897_b.webp',
+        cargoSize: { w: 2200, d: 6200 },
+      },
+      {
+        id: 'wing-3',
+        ton: 3,
+        typeLabel: 'ゲート車',
+        frontImage: '/images/vehicles/1993_f.webp',
+        rearImage: '/images/vehicles/1993_b.webp',
+        cargoSize: { w: 1500, d: 3050 },
+      },
+    ],
+  },
+  {
+    id: 'box',
+    name: '箱　車',
+    items: [
+      {
+        id: 'box-7',
+        ton: 7,
+        typeLabel: '冷蔵・ゲート車',
+        isFeatured: true,
+        frontImage: '/images/vehicles/4975_f.webp',
+        rearImage: '/images/vehicles/4975_b.webp',
+        cargoSize: { w: 2250, h: 2150, d: 6800 },
+      },
+      {
+        id: 'box-4',
+        ton: 4,
+        frontImage: '/images/vehicles/6536_f.webp',
+        rearImage: '/images/vehicles/6536_b.webp',
+        cargoSize: { w: 2070, h: 2130, d: 6200 },
+      },
+      {
+        id: 'box-2',
+        ton: 2,
+        typeLabel: 'ゲート車',
+        frontImage: '/images/vehicles/9278_f.webp',
+        rearImage: '/images/vehicles/9278_b.webp',
+        cargoSize: { w: 2070, h: 2230, d: 4500 },
+      },
+    ],
+  },
+  {
+    id: 'unic',
+    name: 'ユニック車',
+    items: [
+      {
+        id: 'unic-3',
+        ton: 3,
+        typeLabel: '冷蔵・ゲート車',
+        isFeatured: true,
+        frontImage: '/images/vehicles/79_f.webp',
+        rearImage: '/images/vehicles/79_b.webp',
+        cargoSize: { w: 2050, d: 4300 },
+      },
+    ],
+  },
 ];

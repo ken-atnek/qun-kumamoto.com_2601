@@ -41,6 +41,13 @@
             padding-bottom: 8.4rem;
             @include sp {
                 padding-top: 4vw;
+                padding-bottom: unset;
+            }
+            &.wing {
+                padding-bottom: 24rem;
+                @include sp {
+                    padding-bottom: unset;
+                }
             }
             &::before {
                 content: "";
@@ -69,6 +76,7 @@
                     grid-column-start: unset;
                     font-size: FZ(20);
                     padding-left: unset;
+                    width: 100%;
                     text-align: center;
                 }
             }
