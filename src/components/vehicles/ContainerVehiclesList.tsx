@@ -2,27 +2,43 @@
  * 保有車両(vehicles)ページ｜車両リスト
  * URL: src/components/vehicles/ContainerVehiclesList.tsx
  * Created: 2026-1-16
- * Last updated: 2026-1-16
+ * Last updated: 2026-3-14
  * ======================================= */
 'use client';
 
 import styles from '@/styles/PageVehicles.module.scss';
 import { useMemo, useState } from 'react';
+import Image from 'next/image';
 import {
   vehiclesData,
   type VehicleCategory,
+  type VehicleTonnageItem,
 } from '@/data/vehicles/vehiclesData';
-import Image from 'next/image';
+
+const getInitialVehicleId = (items: VehicleTonnageItem[]) => {
+  const featuredItem = items.find((item) => item.isFeatured);
+  return featuredItem?.id ?? items[0]?.id ?? '';
+};
+
+const formatSize = (value?: number) => {
+  return value ? `${value.toLocaleString()}mm` : '—';
+};
 
 function CategoryBlock({ category }: { category: VehicleCategory }) {
-  const initialId =
-    category.items.find((v) => v.isFeatured)?.id ?? category.items[0]?.id ?? '';
+  const initialId = getInitialVehicleId(category.items);
 
   const [activeId, setActiveId] = useState<string>(initialId);
   const [prevId, setPrevId] = useState<string>('');
+
   const activeItem = useMemo(() => {
-    return category.items.find((v) => v.id === activeId) ?? category.items[0];
+    return (
+      category.items.find((item) => item.id === activeId) ?? category.items[0]
+    );
   }, [activeId, category.items]);
+
+  const prevItem = useMemo(() => {
+    return category.items.find((item) => item.id === prevId);
+  }, [prevId, category.items]);
 
   return (
     <li>
@@ -30,11 +46,12 @@ function CategoryBlock({ category }: { category: VehicleCategory }) {
 
       <div className={styles.boxHead}>
         <Image
-          src={category.categoryImage}
+          src={activeItem?.frontImage}
           alt={category.name}
           width={600}
           height={374}
         />
+
         <div className={styles.wrapHeadDetails}>
           <div className={styles.innerTitle}>
             <h4>{category.name}</h4>
@@ -44,31 +61,26 @@ function CategoryBlock({ category }: { category: VehicleCategory }) {
             </span>
             <p>{activeItem?.typeLabel}</p>
           </div>
+
           <div className={styles.innerSize}>
             <h5>積載スペースサイズ</h5>
             <ul>
               <li>
-                <span>L</span>
+                <span>D</span>
                 <div className={styles.itemSize}>
-                  {activeItem?.interior?.length
-                    ? `${activeItem.interior.length.toLocaleString()}mm`
-                    : '—'}
+                  {formatSize(activeItem?.cargoSize?.d)}
                 </div>
               </li>
               <li>
                 <span>W</span>
                 <div className={styles.itemSize}>
-                  {activeItem?.interior?.width
-                    ? `${activeItem.interior.width.toLocaleString()}mm`
-                    : '—'}
+                  {formatSize(activeItem?.cargoSize?.w)}
                 </div>
               </li>
               <li>
                 <span>H</span>
                 <div className={styles.itemSize}>
-                  {activeItem?.interior?.height
-                    ? `${activeItem.interior.height.toLocaleString()}mm`
-                    : '—'}
+                  {formatSize(activeItem?.cargoSize?.h)}
                 </div>
               </li>
             </ul>
@@ -79,18 +91,16 @@ function CategoryBlock({ category }: { category: VehicleCategory }) {
       <ul className={styles.sizeList}>
         {category.items.map((item) => {
           const isActive = item.id === activeId;
+
           return (
             <li key={item.id}>
               <div className={styles.itemImage}>
                 {isActive ? (
                   <div className={styles.fadeStack}>
-                    {prevId ? (
+                    {prevItem ? (
                       <div className={styles.fadePrev}>
                         <Image
-                          src={
-                            category.items.find((v) => v.id === prevId)
-                              ?.tonImage ?? item.tonImage
-                          }
+                          src={prevItem.rearImage}
                           alt=""
                           width={600}
                           height={374}
@@ -100,7 +110,7 @@ function CategoryBlock({ category }: { category: VehicleCategory }) {
 
                     <div className={styles.fadeNext}>
                       <Image
-                        src={item.tonImage}
+                        src={item.rearImage}
                         alt={`${category.name} ${item.ton}t`}
                         width={600}
                         height={374}
@@ -114,8 +124,11 @@ function CategoryBlock({ category }: { category: VehicleCategory }) {
                   </div>
                 ) : null}
               </div>
+
               <div className={styles.headTitle}>
-                <p>{item.ton}t</p>
+                <p>
+                  {item.ton}t<span>{item.typeLabel}</span>
+                </p>
                 <button
                   type="button"
                   className={isActive ? styles.isActive : undefined}
@@ -127,50 +140,22 @@ function CategoryBlock({ category }: { category: VehicleCategory }) {
                   <span>view</span>
                 </button>
               </div>
+
               <dl>
                 <div>
-                  <dt>外側</dt>
+                  <dt>積載スペース</dt>
                   <dd>
                     <span>
-                      <i>長さ</i>
-                      {item.exterior?.length
-                        ? `${item.exterior.length.toLocaleString()}mm`
-                        : '—'}
+                      <i>D</i>
+                      {formatSize(item.cargoSize?.d)}
                     </span>
                     <span>
-                      <i>幅</i>
-                      {item.exterior?.width
-                        ? `${item.exterior.width.toLocaleString()}mm`
-                        : '—'}
+                      <i>W</i>
+                      {formatSize(item.cargoSize?.w)}
                     </span>
                     <span>
-                      <i>高さ</i>
-                      {item.exterior?.height
-                        ? `${item.exterior.height.toLocaleString()}mm`
-                        : '—'}
-                    </span>
-                  </dd>
-                </div>
-                <div>
-                  <dt>内側</dt>
-                  <dd>
-                    <span>
-                      <i>長さ</i>
-                      {item.interior?.length
-                        ? `${item.interior.length.toLocaleString()}mm`
-                        : '—'}
-                    </span>
-                    <span>
-                      <i>幅</i>
-                      {item.interior?.width
-                        ? `${item.interior.width.toLocaleString()}mm`
-                        : '—'}
-                    </span>
-                    <span>
-                      <i>高さ</i>
-                      {item.interior?.height
-                        ? `${item.interior.height.toLocaleString()}mm`
-                        : '—'}
+                      <i>H</i>
+                      {formatSize(item.cargoSize?.h)}
                     </span>
                   </dd>
                 </div>

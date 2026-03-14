@@ -94,11 +94,18 @@
     &.variant-vehicles {
         article {
             padding: 25px 0 7.1rem;
+            @include sp {
+                padding: 0 0 6vw;
+            }
             .catchCopy {
                 font-size: FZ(24);
                 font-weight: 500;
                 letter-spacing: 0.1em;
                 margin-top: 2.6rem;
+                @include sp {
+                    font-size: FZ(16);
+                    margin-top: 2vw;
+                }
             }
         }
     }
