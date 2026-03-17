@@ -42,7 +42,7 @@ export const vehiclesData: VehicleCategory[] = [
         typeLabel: 'ウイング',
         frontImage: '/images/vehicles/3471_f.webp',
         rearImage: '/images/vehicles/3471_b.webp',
-        cargoSize: { w: 2400, h: 2800, d: 9600 },
+        cargoSize: { w: 2400, h: 2600, d: 9600 },
       },
       {
         id: 'wing-max-13b',
@@ -50,7 +50,7 @@ export const vehiclesData: VehicleCategory[] = [
         typeLabel: 'ウイング、ゲート車',
         frontImage: '/images/vehicles/1787_f.webp',
         rearImage: '/images/vehicles/1787_b.webp',
-        cargoSize: { w: 2400, h: 2800, d: 9600 },
+        cargoSize: { w: 2400, h: 2600, d: 9600 },
       },
       {
         id: 'wing-max-13c',
@@ -58,7 +58,7 @@ export const vehiclesData: VehicleCategory[] = [
         typeLabel: 'ウイング、空調車',
         frontImage: '/images/vehicles/4496_f.webp',
         rearImage: '/images/vehicles/4496_b.webp',
-        cargoSize: { w: 2400, h: 2800, d: 9600 },
+        cargoSize: { w: 2400, h: 2600, d: 9600 },
       },
     ],
   },
@@ -95,7 +95,7 @@ export const vehiclesData: VehicleCategory[] = [
         isFeatured: true,
         frontImage: '/images/vehicles/8850_f.webp',
         rearImage: '/images/vehicles/8850_b.webp',
-        cargoSize: { w: 2350, d: 9550 },
+        cargoSize: { w: 2350, d: 9500 },
       },
       {
         id: 'wing-4',
