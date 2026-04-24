@@ -88,14 +88,28 @@ foreach ([$name, $email] as $v) {
 }
 
 // ------------------------------
-// メール設定
+// メール設定（環境別）
 // ------------------------------
-$to = 'ken.atnek@gmail.com';        // テスト
-// $to = 'qun@kind.ocn.ne.jp';      // 本番
-$to_name = '九州運輸';
+$host = $_SERVER['HTTP_HOST'] ?? '';
+
+$mail_configs = [
+  'production' => [
+    'to'         => 'qun@kind.ocn.ne.jp',
+    'from_email' => 'contact@qun-kumamoto.com',
+  ],
+  'other' => [
+    'to'         => 'ken.atnek@gmail.com',
+    'from_email' => 'contact@demo-qun-kumamoto.tuna-pic.co.jp',
+  ],
+];
+
+$env_key = ($host === 'qun-kumamoto.com') ? 'production' : 'other';
+
+$to         = $mail_configs[$env_key]['to'];
+$from_email = $mail_configs[$env_key]['from_email'];
+$to_name    = '九州運輸';
 
 $from_name  = '株式会社九州運輸 お問い合わせ';
-$from_email = 'contact@demo-qun-kumamoto.tuna-pic.co.jp'; // 送信元（この環境に合わせる）
 
 $send_date = date('Y/n/j H:i');
 
