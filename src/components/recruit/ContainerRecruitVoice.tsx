@@ -24,7 +24,7 @@ export default function ContainerRecruitVoice() {
         </p>
         <div className={styles.boxHead}>
           <Image
-            src="/images/recruit/voice01.webp"
+            src="/images/recruit/voice03.webp"
             alt="入社2年目/九州管内配送ドライバー/上村さん"
             width={474}
             height={276}

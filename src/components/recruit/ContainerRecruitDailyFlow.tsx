@@ -81,8 +81,8 @@ export default function ContainerRecruitDailyFlow() {
                 height={255}
               />
             </div>
-            <h3>未経験者へのサポート</h3>
-            <p className={styles.announce}>
+            <h3>経験者への復職サポート</h3>
+            {/* <p className={styles.announce}>
               未経験者大歓迎！
               <br />
               普通免許の方でもＯＫ！
@@ -93,6 +93,16 @@ export default function ContainerRecruitDailyFlow() {
               <span className={styles.announce}>
                 免許取得費用は<em>当社全額負担します</em>
               </span>
+            </p> */}
+            <p className={styles.announce}>
+              ブランクのある方も大歓迎！
+              <br /> 以前の経験を活かして働けます。
+              <br />
+              復職前の不安もしっかりサポート
+              <br />
+              同乗研修・業務確認あり
+              <br />
+              無理なく現場復帰できる環境です
             </p>
           </div>
         </article>

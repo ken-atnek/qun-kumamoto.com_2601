@@ -102,7 +102,7 @@ $mail_configs = [
     'from_email' => 'contact@demo-qun-kumamoto.tuna-pic.co.jp',
   ],
 ];
-
+	
 $env_key = ($host === 'qun-kumamoto.com') ? 'production' : 'other';
 
 $to         = $mail_configs[$env_key]['to'];

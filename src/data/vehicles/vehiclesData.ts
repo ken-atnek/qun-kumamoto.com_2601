@@ -36,9 +36,17 @@ export const vehiclesData: VehicleCategory[] = [
     name: '増トンウイング車',
     items: [
       {
+        id: 'wing-max-13c',
+        ton: 13,
+        typeLabel: 'ウイング、空調車',
+        isFeatured: true,
+        frontImage: '/images/vehicles/4496_f.webp',
+        rearImage: '/images/vehicles/4496_b.webp',
+        cargoSize: { w: 2400, h: 2600, d: 9600 },
+      },
+      {
         id: 'wing-max-13',
         ton: 13,
-        isFeatured: true,
         typeLabel: 'ウイング',
         frontImage: '/images/vehicles/3471_f.webp',
         rearImage: '/images/vehicles/3471_b.webp',
@@ -50,14 +58,6 @@ export const vehiclesData: VehicleCategory[] = [
         typeLabel: 'ウイング、ゲート車',
         frontImage: '/images/vehicles/1787_f.webp',
         rearImage: '/images/vehicles/1787_b.webp',
-        cargoSize: { w: 2400, h: 2600, d: 9600 },
-      },
-      {
-        id: 'wing-max-13c',
-        ton: 13,
-        typeLabel: 'ウイング、空調車',
-        frontImage: '/images/vehicles/4496_f.webp',
-        rearImage: '/images/vehicles/4496_b.webp',
         cargoSize: { w: 2400, h: 2600, d: 9600 },
       },
     ],

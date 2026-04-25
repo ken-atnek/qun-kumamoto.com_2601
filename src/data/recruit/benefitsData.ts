@@ -49,9 +49,9 @@ export const benefitsItems: BenefitItem[] = [
   },
   {
     no: '07',
-    title: '各種表彰制度',
+    title: '無事故無違反表彰制度',
     description: [
-      '永年勤続表彰（10年・20年・30年）のほか、無事故無違反安全運転表彰を毎年行っています。',
+      '無事故・無違反で安全運転を継続した社員を毎年表彰しています。',
     ],
     iconId: 'icon-benefit-07',
   },
@@ -66,7 +66,10 @@ export const benefitsItems: BenefitItem[] = [
   {
     no: '09',
     title: 'その他',
-    description: ['「亀の甲温泉」入浴無料券支給', '（※毎日）'],
+    description: [
+      '「亀の甲温泉」入浴無料券支給',
+      '誕生日には素敵なプレゼントが・・',
+    ],
     iconId: 'icon-benefit-09',
   },
 ];
