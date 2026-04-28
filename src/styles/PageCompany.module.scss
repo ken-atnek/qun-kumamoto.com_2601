@@ -200,12 +200,12 @@
         &::before {
             content: "";
             position: absolute;
-            right: calc(100% + 6.6rem);
-            width: 309px;
+            right: calc(100% + 3rem);
+            width: 469px;
             bottom: 1rem;
             background: url("/images/company/item-creed.webp") no-repeat center
                 center / contain;
-            aspect-ratio: 309/380;
+            aspect-ratio: 469/286;
             @include sp {
                 display: none;
             }
