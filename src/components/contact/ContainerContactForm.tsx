@@ -13,7 +13,7 @@ import clsx from 'clsx';
 import type { ReactNode } from 'react';
 import { useState, useRef } from 'react';
 
-const endpoint = 'https://demo-qun-kumamoto.tuna-pic.co.jp/backend/contact.php';
+const endpoint = '/backend/contact.php';
 
 type ContactApiResponse =
   | { success: true; message?: string }
