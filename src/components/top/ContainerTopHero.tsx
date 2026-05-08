@@ -66,7 +66,7 @@ export default function ContainerTopHero() {
       <p className={styles.catch}>
         熊本の
         <br />
-        心と旬を運ぶ。
+        心と旬を運ぶ
       </p>
       <p className={styles.text}>
         物流を通し人と人との懸け橋に。熊本と全国を結ぶ。

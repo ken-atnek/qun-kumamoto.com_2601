@@ -12,7 +12,7 @@ export const jobCard01Detail: RecruitJobDetailData = {
     imgSrc02: '/images/recruit/thumb-02.webp',
     titleMain: '仕事内容',
     titleMainText: [
-      '＼ 未経験から“月給25万円以上”も可能！安定して稼げるお仕事です ／',
+      '“月給25万円以上”も可能！安定して稼げるお仕事です ',
       ' 「運転が好き」「地元で長く働きたい」そんな方にピッタリ！',
     ],
     titleSub: '◆この仕事のPOINT  ',
