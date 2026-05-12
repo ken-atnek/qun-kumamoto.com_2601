@@ -23,17 +23,17 @@ export type RecruitJobIndexItem = {
 // - 募集停止中は isOpen: false にしておくと、表示側で除外できます。
 export const recruitJobsIndex: RecruitJobIndexItem[] = [
   // ▼サンプル（必要になったらコメント外して編集）
-  {
-    id: 'jobCard01',
-    isOpen: true,
-    sortOrder: 0,
-    title: '中型地場配送ドライバー（４t ）',
-    thumbSrc: '/images/recruit/thumb-01.webp',
-    highlights: '“月給25万円以上”も可能！安定して稼げるお仕事です',
-    employmentType: '正社員',
-    areaText: '菊池市',
-    salaryText: '月給 250,000〜280,000円',
-  },
+  // {
+  //   id: 'jobCard01',
+  //   isOpen: true,
+  //   sortOrder: 0,
+  //   title: '中型地場配送ドライバー（４t ）',
+  //   thumbSrc: '/images/recruit/thumb-01.webp',
+  //   highlights: '“月給25万円以上”も可能！安定して稼げるお仕事です',
+  //   employmentType: '正社員',
+  //   areaText: '菊池市',
+  //   salaryText: '月給 250,000〜280,000円',
+  // },
   {
     id: 'jobCard02',
     isOpen: true,
