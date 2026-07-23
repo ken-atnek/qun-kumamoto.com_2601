@@ -13,7 +13,7 @@ import Image from 'next/image';
 
 const heroImages = [
   '/images/top/hero01.webp',
-  '/images/top/hero02.webp',
+  // '/images/top/hero02.webp',
   '/images/top/hero03.webp',
 ];
 
