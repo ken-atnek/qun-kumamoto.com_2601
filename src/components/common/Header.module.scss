@@ -46,13 +46,14 @@
             }
         }
         h1 {
+            align-self: center;
+
             img {
                 max-width: 36rem;
                 @include sp {
                     width: 60vw;
                 }
             }
-            align-self: center;
         }
         nav {
             position: relative;

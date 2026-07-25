@@ -75,12 +75,11 @@
         display: none;
         @include sp {
             position: absolute;
-            top: 20vw;
-            left: 50%;
-            translate: -50%;
+            top: 6vw;
+            left: 4vw;
             z-index: 2;
             display: block;
-            width: 80vw;
+            width: 55vw;
             img {
                 width: 100%;
             }
