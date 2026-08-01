@@ -53,12 +53,20 @@
     }
     .catch {
         position: relative;
-        font-size: FZ(128);
+        font-size: min(7vw, 11rem);
         font-weight: 500;
         letter-spacing: 0.05em;
+        writing-mode: vertical-rl; //縦書き
+        text-orientation: upright; //縦書き英数回転
+        font-feature-settings: initial; //左詰め解除
+        align-self: flex-start;
+        line-height: 1.2em;
+
         @include sp {
             font-size: FZ(28);
             letter-spacing: 0.08em;
+            padding-left: 10vw;
+            line-height: 1.4em;
         }
     }
     .text {
@@ -75,11 +83,11 @@
         display: none;
         @include sp {
             position: absolute;
-            top: 6vw;
-            left: 4vw;
+            top: 2vw;
+            left: 2vw;
             z-index: 2;
             display: block;
-            width: 55vw;
+            width: 50vw;
             img {
                 width: 100%;
             }

@@ -18,13 +18,11 @@
     transition: 0.3s ease-out;
     padding-top: 1.3rem;
     padding-inline: 2vw;
-    @include sp {
-        padding: 0;
-    }
+
     article {
         display: flex;
         justify-content: space-between;
-        gap: 0 2em;
+        gap: 0 min(2vw, 3rem);
         @include sp {
             position: fixed;
             justify-content: unset;
@@ -47,9 +45,8 @@
         }
         h1 {
             align-self: center;
-
             img {
-                max-width: 36rem;
+                width: min(30vw, 36rem);
                 @include sp {
                     width: 60vw;
                 }
@@ -63,12 +60,14 @@
                 flex-direction: column;
             }
             a {
-                font-size: FZ(16);
+                font-size: min(1.5vw, 1.6rem);
                 color: $font-white;
                 letter-spacing: 0.1em;
                 @include flex-center;
+
                 @include sp {
                     padding-block: 6vw;
+                    font-size: 5vw;
                 }
                 &.isMobile {
                     display: none;
@@ -79,7 +78,7 @@
             }
         }
         .mainMenu {
-            gap: 0 2em;
+            gap: 0 min(1vw, 3rem);
             margin-left: auto;
             @include sp {
                 margin-left: unset;
